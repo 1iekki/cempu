@@ -1,0 +1,12 @@
+
+services:
+  analysis:
+    build:
+      context: ./analysis          
+      dockerfile: Dockerfile
+    container_name: cempu-analysis
+    command: uv run python main.py
+    volumes:
+      - ./analysis:/app
+    ports:
+      - "8000:8000"
