@@ -1,0 +1,2 @@
+class SpeakerDiarization:
+    pass

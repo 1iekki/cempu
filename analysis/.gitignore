@@ -1,0 +1,5 @@
+.env
+.vscode
+tempCodeRunnerFile.py
+__pycache__
+models
