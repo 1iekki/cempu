@@ -2,6 +2,7 @@ import os
 from sentence_transformers import SentenceTransformer
 from dotenv import load_dotenv
 from semanticSearch import SemanticSearch
+from transcriber import Transcriber
 
 def main():
     load_dotenv()
@@ -13,12 +14,16 @@ def main():
         ]
     query = "How big is London"
 
-    s.encode_passage(passage)``
+    s.encode_passage(passage)
     s.query(query)
 
     passage.append("Which of these recipes contain eggs")
     s.encode_passage(passage)
     s.query("I just made an omelette")
+    
+def transcribe():
+    transcrib = Transcriber("MODEL_NAME") # tiny/base/small/medium/large/turbo
+    transcrib.transcribe("PATH\\TO\\AUDIO") 
 
 if __name__ == "__main__":
     main()
