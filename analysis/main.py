@@ -6,7 +6,7 @@ from transcriber import Transcriber
 
 def main():
     load_dotenv()
-    s = SemanticSearch(os.getenv("SEMSEARCH_MODEL_PATH"))
+    s = SemanticSearch(os.getenv("SEMSEARCH_MODEL_PATH")) # if model not downloaded, will download to path
     passage = [
             "London is known for its financial district",
             "London has 9,787,426 inhabitants at the 2011 census",
@@ -20,10 +20,12 @@ def main():
     passage.append("Which of these recipes contain eggs")
     s.encode_passage(passage)
     s.query("I just made an omelette")
+
+    transcribe()
     
 def transcribe():
-    transcrib = Transcriber("MODEL_NAME") # tiny/base/small/medium/large/turbo
-    transcrib.transcribe("PATH\\TO\\AUDIO") 
+    transcrib = Transcriber(os.getenv("TRANSCRIBER_MODEL_NAME")) # tiny/base/small/medium/large/turbo
+    transcrib.transcribe(os.getenv("AUDIO_PATH"), printWithProcessing=True) 
 
 if __name__ == "__main__":
     main()

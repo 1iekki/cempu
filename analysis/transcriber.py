@@ -10,7 +10,7 @@ class Transcriber:
         
     def transcribe(self, audioFile, printWithProcessing = False):
         print("Processing...")
-        result = self.model.transcribe(audioFile, fp16=False, verbose=printWithProcessing)
+        result = self.model.transcribe(audioFile, fp16=False, verbose=printWithProcessing, language="en")
         print(result["text"])
         return result
         
