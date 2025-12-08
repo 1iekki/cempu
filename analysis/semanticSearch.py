@@ -9,18 +9,18 @@ class SemanticSearch:
 
     def __init__(self, modelPath):
         if not os.path.exists(modelPath):
-            print("Downloading model...")
+            print(f"Downloading model semantic search model to {modelPath}...")
             self.model = SentenceTransformer("multi-qa-mpnet-base-cos-v1")
             self.model.save(modelPath)
-            print("Download completed, model save under: "+modelPath)
+            print(f"Download completed, model saved under: {modelPath}")
 
         else:
+            print(f"Loaded semantic search model from: {modelPath}")
             self.model = SentenceTransformer(modelPath)
 
     def encode_passage(self, passage:list):
         self.passage_embeddings = self.model.encode(passage)
 
-    def query(self, query:str):
+    def query(self, query:str) -> list:
         self.query_embedding = self.model.encode(query)
-        similarity = self.model.similarity(self.query_embedding, self.passage_embeddings)
-        print(similarity)
+        return self.model.similarity(self.query_embedding, self.passage_embeddings).tolist()
