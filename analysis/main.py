@@ -41,7 +41,10 @@ def main():
             "element", "array", "insert", "sort", "position",
             "shift", "compare", "index", "next", "previous",
             "iteration", "pass", "key", "number", "loop", "value"
-        ]
+        ],
+        "remove_filler_words": True,
+        "backchannel_counting": True,
+        "debug_skip_transcriber": True
     }
 
     p = ContextProcessor(params)
