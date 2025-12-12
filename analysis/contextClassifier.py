@@ -2,10 +2,12 @@ import numpy as np
 import pickle
 from sklearn.neural_network import MLPClassifier
 from sklearn.preprocessing import StandardScaler
+from imblearn.over_sampling import RandomOverSampler
+from sklearn.linear_model import LogisticRegression
+
 class ContextClassifier:
     X_train:np.ndarray
     y_train:np.ndarray
-    mlp:MLPClassifier
     scaler:StandardScaler
 
     def __init__(self, raw_data=True):
@@ -20,16 +22,20 @@ class ContextClassifier:
         self.X_train = data[:, :-1]
         self.y_train = data[:, -1].astype(int)
 
-        self.mlp = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42)
+        ros = RandomOverSampler(random_state=42)
+        self.X_train, self.y_train = ros.fit_resample(self.X_train, self.y_train)
+
+        # self.clf = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42)
+        self.clf = LogisticRegression(max_iter=1000, class_weight='balanced', random_state=42)
 
         self.scaler = StandardScaler()
         X_train_scaled = self.scaler.fit_transform(self.X_train)
 
-        self.mlp.fit(X_train_scaled, self.y_train)
+        self.clf.fit(X_train_scaled, self.y_train)
 
     def getScore(self, X_test) -> float:
         X_test_scaled = self.scaler.transform(X_test)
-        y_pred = self.mlp.predict(X_test_scaled)
+        y_pred = self.clf.predict(X_test_scaled)
     
         topics = y_pred
         total = len(topics)
@@ -50,7 +56,7 @@ if __name__ == "__main__":
     from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, HistGradientBoostingClassifier
     from sklearn.linear_model import LogisticRegression
     from sklearn.svm import SVC
-    from sklearn.metrics import accuracy_score, f1_score
+    from sklearn.metrics import accuracy_score, f1_score, classification_report
     from sklearn.neural_network import MLPClassifier
 
     # Load data
@@ -89,7 +95,7 @@ if __name__ == "__main__":
         "HistGBT": HistGradientBoostingClassifier(max_iter=100, random_state=42),
         "LogisticRegression": LogisticRegression(max_iter=1000, class_weight='balanced', random_state=42),
         "SVM": SVC(kernel='rbf', class_weight='balanced', probability=True, random_state=42),
-        "MLP": MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42)
+        "MLP": MLPClassifier(hidden_layer_sizes=(256, 128), max_iter=1000, random_state=42)
     }
 
     # Loop over classifiers
@@ -98,10 +104,13 @@ if __name__ == "__main__":
         f1_macros = []
         f1_weighteds = []
 
-        for i in range(100):
+        for i in range(1):
             X_train, X_test, y_train, y_test = train_test_split(
                 X, y, test_size=0.3, random_state=random.randint(0, 1000), stratify=y
             )
+
+            ros = RandomOverSampler(random_state=42)
+            X_train, y_train = ros.fit_resample(X_train, y_train)
 
             scaler = StandardScaler()
             X_train_scaled = scaler.fit_transform(X_train)
@@ -113,6 +122,7 @@ if __name__ == "__main__":
             accs.append(accuracy_score(y_test, y_pred))
             f1_macros.append(f1_score(y_test, y_pred, average='macro'))
             f1_weighteds.append(f1_score(y_test, y_pred, average='weighted'))
+            print(classification_report(y_test, y_pred))
 
         print(f"\nClassifier: {name}")
         # overall accuracy
