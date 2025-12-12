@@ -21,6 +21,11 @@ if __name__ == "__main__":
     with open("outputs/classifier_data.pkl", "rb") as f:
         data = pickle.load(f)
 
+        with open("outputs/contaminated_data.pkl", "rb") as f1:
+            new_data = pickle.load(f1)
+            data = np.vstack([data, new_data])
+
+    print(len(data))
     column_names = [
         "task", "meta", "env", "vocab", "litq", "backch", "neg", "topic", "keyword",
         "prev_sim", "prev_task", "prev_meta", "prev_env", "prev_vocab", "prev_litq", "prev_backch", "prev_neg", "prev_topic", "prev_keyword",

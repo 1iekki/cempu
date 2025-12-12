@@ -116,7 +116,7 @@ def main():
             "iteration", "pass", "key", "loop", "while", "for", "swap"
         ],
         "debug_skip_transcriber": True,
-        "log_results": True,
+        "log_results": False,
         "save_segments_bin": False
     }
 
@@ -124,19 +124,19 @@ def main():
     p = ContextProcessor(params)
     res = p.process(AUDIO_PATH)
     
-    # import numpy as np
-    # import pickle
-    # topics = []
-    # with open("outputs/topic.txt", "r", encoding="utf-8") as f:
-    #     for line in f.readlines():
-    #         topics.append(int(line))
-    # topics = topics[1:-1]
-    # topics = np.array(topics).reshape(-1, 1)  # make it a column vector
+    import numpy as np
+    import pickle
+    topics = []
+    with open("outputs/topics_prepared.txt", "r", encoding="utf-8") as f:
+        for line in f.readlines():
+            topics.append(int(line))
+    topics = topics[1:-1]
+    topics = np.array(topics).reshape(-1, 1)  # make it a column vector
     
-    # res = np.hstack([res, topics])
-    # res = res.tolist()
-    # with open("outputs/classifier_data.pkl", "wb") as f:
-    #     pickle.dump(res, f)
+    res = np.hstack([res, topics])
+    res = res.tolist()
+    with open("outputs/contaminated_data.pkl", "wb") as f:
+        pickle.dump(res, f)
 
 if __name__ == "__main__":
     main()
