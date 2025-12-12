@@ -96,11 +96,3 @@ Classifier: MLP
 Average accuracy: 0.8548 ± 0.0000
 Macro F1:         0.7850 ± 0.0000
 Weighted F1:      0.8491 ± 0.0000
-
-#########################################################################################################
-CONTAMINATED DATA 50/50 SPLIT REMAINING DATA (50 - 50 class split; test on remaining data)
-#########################################################################################################
-Classifier: MLP
-Accuracy:     0.8548
-Macro F1:     0.7850
-Weighted F1:  0.8491

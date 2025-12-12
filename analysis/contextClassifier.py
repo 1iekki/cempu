@@ -1,7 +1,43 @@
-
+import numpy as np
+import pickle
+from sklearn.neural_network import MLPClassifier
+from sklearn.preprocessing import StandardScaler
 class ContextClassifier:
-    def __init__():
-        pass    
+    X_train:np.ndarray
+    y_train:np.ndarray
+    mlp:MLPClassifier
+    scaler:StandardScaler
+
+    def __init__(self, raw_data=True):
+        with open("outputs/classifier_data.pkl", "rb") as f:
+            data = np.array(pickle.load(f))
+
+            if not raw_data:
+                with open("outputs/contaminated_data.pkl", "rb") as f1:
+                    new_data = pickle.load(f1)
+                    data = np.vstack([data, new_data])
+
+        self.X_train = data[:, :-1]
+        self.y_train = data[:, -1].astype(int)
+
+        self.mlp = MLPClassifier(hidden_layer_sizes=(64, 32), max_iter=500, random_state=42)
+
+        self.scaler = StandardScaler()
+        X_train_scaled = self.scaler.fit_transform(self.X_train)
+
+        self.mlp.fit(X_train_scaled, self.y_train)
+
+    def getScore(self, X_test) -> float:
+        X_test_scaled = self.scaler.transform(X_test)
+        y_pred = self.mlp.predict(X_test_scaled)
+    
+        topics = y_pred
+        total = len(topics)
+        count_1 = np.sum(topics == 1)
+
+        return count_1/total*100.0
+
+
 
 if __name__ == "__main__":
 

@@ -1,7 +1,7 @@
 from contextProcessor import ContextProcessor
-
+from contextClassifier import ContextClassifier
 def main():
-    AUDIO_PATH = 'audio/pogil.wav'
+    AUDIO_PATH = 'audio/bullshit.wav'
 
     params = {
         "task_queries": [
@@ -115,28 +115,31 @@ def main():
             "shift", "compare", "comparison", "index", "value", "number",
             "iteration", "pass", "key", "loop", "while", "for", "swap"
         ],
-        "debug_skip_transcriber": True,
+        "debug_skip_transcriber": False,
         "log_results": False,
         "save_segments_bin": False
     }
 
 
     p = ContextProcessor(params)
+    clf = ContextClassifier(True)
     res = p.process(AUDIO_PATH)
     
-    import numpy as np
-    import pickle
-    topics = []
-    with open("outputs/topics_prepared.txt", "r", encoding="utf-8") as f:
-        for line in f.readlines():
-            topics.append(int(line))
-    topics = topics[1:-1]
-    topics = np.array(topics).reshape(-1, 1)  # make it a column vector
+    print(clf.getScore(res))
+
+    # import numpy as np
+    # import pickle
+    # topics = []
+    # with open("outputs/topics_prepared.txt", "r", encoding="utf-8") as f:
+    #     for line in f.readlines():
+    #         topics.append(int(line))
+    # topics = topics[1:-1]
+    # topics = np.array(topics).reshape(-1, 1)  # make it a column vector
     
-    res = np.hstack([res, topics])
-    res = res.tolist()
-    with open("outputs/contaminated_data.pkl", "wb") as f:
-        pickle.dump(res, f)
+    # res = np.hstack([res, topics])
+    # res = res.tolist()
+    # with open("outputs/contaminated_data.pkl", "wb") as f:
+    #     pickle.dump(res, f)
 
 if __name__ == "__main__":
     main()
