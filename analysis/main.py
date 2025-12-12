@@ -4,23 +4,30 @@ def main():
     AUDIO_PATH = 'audio/pogil.wav'
 
     params = {
-        "pos_queries": [
-            # TASK SPECIFIC
+        "task_queries": [
             "discussing insertion sort steps",
             "explaining how insertion sort works",
-            "talking about array and inserting elements in order",
-            # META ACTIVITY
+            "talking about array and inserting elements in order"
+        ],
+
+        "meta_queries": [
             "students collaborating on a programming excersise",
             "students solving an algorithm and data structures problem",
-            "students analyzing an array for sorting",
-            # ENVIRONMENT
+            "students analyzing an array for sorting"
+        ],
+
+        "env_queries": [
             "group work in a computer science class",
             "students talking in a computer science class",
-            "discussion during algorithms and data structures class",
-            # VOCABULARY
+            "discussion during algorithms and data structures class"
+        ],
+
+        "vocab_queries": [
             "using terms like element, array, insert, sorted, next element",
             "using numbers"
-            # LITERAL QUESTIONS FROM EXCERSISE
+        ],
+
+        "litq_queries": [
             "How many time steps are shown?",
             "How many slots are in the input array and the output array?",
             "In each time step, how many slots are empty?",
@@ -70,6 +77,19 @@ def main():
             "Determine the O() and Ω() behavior of the best and worst cases.",
             "Determine the O() and Ω() behavior of the generic case for insertion sort."
         ],
+
+        "backch_queries": [
+            "yeah", "sure", "okay", "ok", "alright",
+            "uh", "um", "uhm", "hmm",
+            "like", "you know", "i mean",
+            "maybe", "probably", "kinda", "sorta",
+            "i don't know", "i dunno",
+            "right", "well", "so", "anyway",
+            "basically", "literally", "actually",
+            "huh", "mm-hm", "uh-huh", "nah", "yep",
+            "totally", "honestly"
+        ],
+
         "neg_queries": [
             "casual social conversation",
             "jokes or unrelated chatting",
@@ -77,6 +97,7 @@ def main():
             "topics unrelated to programming or algorithms",
             "small talk"
         ],
+
         "topic_phrases": [
             "insertion sort",
             "sorting an array",
@@ -88,19 +109,34 @@ def main():
             "array element comparison",
             "shift elements to make space"
         ],
+
         "keywords": [
             "element", "array", "insert", "sort", "position",
             "shift", "compare", "comparison", "index", "value", "number",
-            "iteration", "pass", "key", "loop", "while", "for", "swap",
+            "iteration", "pass", "key", "loop", "while", "for", "swap"
         ],
-        "remove_filler_words": True,
-        "backchannel_counting": True,
-        "debug_skip_transcriber": True
+        "debug_skip_transcriber": True,
+        "log_results": True,
+        "save_segments_bin": False
     }
 
+
     p = ContextProcessor(params)
+    res = p.process(AUDIO_PATH)
     
-    p.process(AUDIO_PATH)
+    # import numpy as np
+    # import pickle
+    # topics = []
+    # with open("outputs/topic.txt", "r", encoding="utf-8") as f:
+    #     for line in f.readlines():
+    #         topics.append(int(line))
+    # topics = topics[1:-1]
+    # topics = np.array(topics).reshape(-1, 1)  # make it a column vector
+    
+    # res = np.hstack([res, topics])
+    # res = res.tolist()
+    # with open("outputs/classifier_data.pkl", "wb") as f:
+    #     pickle.dump(res, f)
 
 if __name__ == "__main__":
     main()

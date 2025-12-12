@@ -7,8 +7,10 @@ requires-python = ">=3.13"
 dependencies = [
     "openai>=2.8.1",
     "openai-whisper>=20250625",
+    "pandas>=2.3.3",
     "pyannote-audio>=4.0.1",
     "python-dotenv>=1.2.1",
+    "scikit-learn>=1.7.2",
     "sentence-transformers>=5.1.2",
     "whisper>=1.1.10",
 ]
