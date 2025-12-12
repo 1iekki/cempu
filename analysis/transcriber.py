@@ -53,7 +53,7 @@ class Transcriber:
         result = self.model.transcribe(audio_path, fp16=gpuEnabled, verbose=printWithProcessing, language="en")
         return result
     
-    def stream_segment_to(self, audio_path:str, on_segment:Callable) -> None:
+    def stream_segment_to(self, audio_path:str, on_segment:Callable):
         result = self.transcribe(audio_path)
 
         for seg in result["segments"]:

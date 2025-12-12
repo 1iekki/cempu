@@ -80,7 +80,7 @@ class ContextProcessor:
             self.remove_fillers()
 
         sentence_embeds = self.semanticSearch.encode(self.passage)
-        
+
         res = self.semanticSearch.similarity(self.pos_embeds, sentence_embeds)
         pos_scores = self.max_score(res)
 
@@ -93,15 +93,18 @@ class ContextProcessor:
         keyword_count = [sum(1 for k in self.keywords if k in seg["text"].lower()) for seg in self.segments]
         keyword_bonuses = [min(x * 0.05, 0.20) for x in keyword_count]
 
-        final_scores = np.array(pos_scores) - np.array(neg_scores) + np.array(topic_scores) + np.array(keyword_bonuses)
+        final_scores = self.z_score_norm(pos_scores - neg_scores + topic_scores + keyword_bonuses)
 
         with open("outputs/scores.txt", "w", encoding="utf-8") as f:
+            print("SENTENCE SCORES", file=f)
             for i, seg in enumerate(self.segments):
                 print(f"[{final_scores[i]:.4f}] << {self.segments[i]['start']:.2f} : {self.segments[i]['end']:.2f} => {self.segments[i]['text']}", file=f)
                 print(f"{{ pos_score: {pos_scores[i]:.4f}, neg_score: {neg_scores[i]:.4f}, topic_score: {topic_scores[i]:.4f}, keyword_count: {keyword_count[i]} }}\n", file=f)
+            
+            print("FILTERED", file=f)
             for i, seg in enumerate(self.removed):
                 print(f"{seg['start']:.2f} : {seg['end']:.2f} => {seg['text']}", file=f)
-            
+
 
         # with open("output/segments.pkl", "wb") as f:
         #     pickle.dump(self.segments, f, protocol=pickle.HIGHEST_PROTOCOL)
@@ -113,14 +116,14 @@ class ContextProcessor:
         
         self.segments.append(seg)
 
-    def max_score(self, tensor) -> list:
-        return tensor.max(dim=0).values.tolist()
+    def max_score(self, tensor) -> np.ndarray:
+        return tensor.max(dim=0).values.numpy()
 
-    def mean_score(self, tensor) -> list:
-        return tensor.mean(dim=0).tolist()
+    def mean_score(self, tensor) -> np.ndarray:
+        return tensor.mean(dim=0).numpy()
 
-    def weighted_max(self, tensor) -> list:
-        return (0.7 * tensor.max(dim=0).values + 0.3 * tensor.mean(dim=0)).tolist()
+    def weighted_max(self, tensor) -> np.ndarray:
+        return (0.7 * tensor.max(dim=0).values + 0.3 * tensor.mean(dim=0)).numpy()
     
     def remove_fillers(self):
         passage_enc = self.semanticSearch.encode(self.passage)
@@ -134,3 +137,8 @@ class ContextProcessor:
         self.passage = [v for i, v in enumerate(self.passage) if i not in remove]
         self.segments = [v for i, v in enumerate(self.segments) if i not in remove]
         
+    def z_score_norm(self, arr: np.ndarray) -> np.ndarray:
+        mean = arr.mean()
+        std = arr.std() + 1e-9
+        z = (arr - mean) / std
+        return (z - z.min()) / (z.max() - z.min())
