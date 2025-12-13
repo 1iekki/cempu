@@ -2,8 +2,11 @@ import paho.mqtt.client as mqtt
 
 IP_ADDRESS = "192.168.0.7"
 PORT = 1883
-LIST_OF_TOPICS = ["CEMPU/{}/command"]
+
 ENGAGEMENT_TOPIC = "CEMPU/{}/engagement"
+COMMAND_TOPIC = "CEMPU/{}/command"
+
+LIST_OF_TOPICS = [COMMAND_TOPIC]
 
 def on_message(client, userdata, msg):
     print(msg.topic, msg.payload.decode())
@@ -38,3 +41,7 @@ class CempuMQTT:
     def sendEngagement(self, engagement: float) -> None:
         topic = ENGAGEMENT_TOPIC.format(self.deviceID)
         self.client.publish(topic, engagement, qos=1)
+
+    def sendCommand(self, command: int, deviceID: str) -> None:
+        topic = ENGAGEMENT_TOPIC.format(deviceID)
+        self.client.publish(topic, command, qos=1)
