@@ -13,7 +13,7 @@ def normalize(x, lowerBound, upperBound):
      
      return (x - lowerBound) / (upperBound - lowerBound)
 
-def calculateEngagementFromWindow(block, sampleRate):
+def calculateEngagementFromWindow(block, sampleRate) -> float:
 
     analysisBlockSize = 1 * 1024 #1kb
 
@@ -22,7 +22,7 @@ def calculateEngagementFromWindow(block, sampleRate):
     peaks = [np.max(np.abs(block[i:i+analysisBlockSize])) for i in range(0, len(block), analysisBlockSize)]
     peaksInDB = 20 * np.log10(np.clip(peaks, 1e-12, None))
 
-    stdPeak = np.std(peaksInDB)
+    stdPeak = float(np.std(peaksInDB))
 
     STDLowerBound = 7
     STDHighBound = 13
