@@ -16,8 +16,9 @@ class CempuMQTT:
     client: mqtt.Client
     deviceID: str
 
-    def __init__(self, deviceID: str):
-        self.client.on_message = on_message
+    def __init__(self, deviceID: str, callback = on_message):
+        self.client = mqtt.Client()
+        self.client.on_message = callback
         self.deviceID = deviceID
 
 
