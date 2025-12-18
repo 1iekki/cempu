@@ -16,22 +16,26 @@ logger = logging.getLogger('uvicorn.error')
 logger.setLevel(logging.DEBUG)
 
 def on_message(client, userdata, msg):
-    # 1. Unpack the tuple you passed in __init__
+    
     queue, loop = userdata
-    
-    # 2. Decode the message
     payload = msg.payload.decode()
-    
-    # 3. Thread-Safety Magic:
-    # Tell the main loop: "Please run queue.put_nowait(payload) ASAP"
-    loop.call_soon_threadsafe(queue.put_nowait, payload)
+
+    topic: str = msg.topic
+    topicTokens = topic.split("/")
+
+    if(len(topicTokens) >= 2):
+        device_id = topicTokens[1]
+    else:
+        device_id = "error"
+
+    loop.call_soon_threadsafe(queue.put_nowait, [payload,device_id])
 
 class CempuMQTT:
     client: mqtt.Client
     deviceID: str
 
     def __init__(self, deviceID: str, queue: asyncio.Queue, loop: asyncio.AbstractEventLoop):
-        self.client = mqtt.Client(userdata=(queue, loop))
+        self.client = mqtt.Client(userdata=(queue,loop))
         self.client.on_message = on_message
         self.deviceID = deviceID
 
