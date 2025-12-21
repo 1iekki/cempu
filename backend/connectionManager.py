@@ -1,4 +1,5 @@
 from typing import List
+
 from fastapi import WebSocket
 
 
@@ -13,7 +14,7 @@ class ConnectionManager:
         self.active_connections[device_id].append(websocket)
 
     def disconnect(self, websocket: WebSocket, device_id: str):
-         if device_id in self.active_connections:
+        if device_id in self.active_connections:
             if websocket in self.active_connections[device_id]:
                 self.active_connections[device_id].remove(websocket)
 

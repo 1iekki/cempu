@@ -1,10 +1,12 @@
 import asyncio
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
 
-from contextlib import asynccontextmanager
 from cempuMQTT import CempuMQTT
 from connectionManager import ConnectionManager
+
 
 async def handleMQTTMessages(queue: asyncio.Queue, manager: ConnectionManager):
     while True:
@@ -12,10 +14,11 @@ async def handleMQTTMessages(queue: asyncio.Queue, manager: ConnectionManager):
 
         device_id = data["device_id"]
         payload = data["payload"]
-        
+
         await manager.broadcast_to_device(payload, device_id)
-        
+
         queue.task_done()
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -26,8 +29,8 @@ async def lifespan(app: FastAPI):
 
     mqtt_queue = asyncio.Queue()
     worker_task = asyncio.create_task(handleMQTTMessages(mqtt_queue, manager))
-                                      
-    with CempuMQTT("server", mqtt_queue, loop) as mqtt: 
+
+    with CempuMQTT("server", mqtt_queue, loop) as mqtt:
         app.state.mqtt = mqtt
         yield
 
@@ -74,6 +77,7 @@ html = """
 @app.get("/")
 async def get():
     return HTMLResponse(html)
+
 
 @app.websocket("/ws/{device_id}")
 async def websocket_endpoint(websocket: WebSocket, device_id: str):

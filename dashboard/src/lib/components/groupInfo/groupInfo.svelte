@@ -1,30 +1,19 @@
 <script lang="ts">
-    import { tv, type VariantProps } from "tailwind-variants";
     import type { Snippet } from "svelte";
-    const groupVariants = tv({
-        base: "grid grid-cols-2 grid-rows-3 rounded-md p-4",
-        variants: {
-            status: {
-                recording: "bg-green-500",
-                paused: "bg-blue-500",
-                stopped: "bg-red-500",
-            },
-        },
-        defaultVariants: {
-            status: "recording",
-        },
-    });
-    type Variants = VariantProps<typeof groupVariants>;
-
+    import { groupVariants, type GroupVariants } from "./groupInfo.variants";
     let {
         children,
         class: className,
         status = "recording",
+        groupName,
+        deviceName,
         ...rest
     }: {
         children?: Snippet;
         class?: string;
-        status?: Variants["status"];
+        status?: GroupVariants["status"];
+        groupName?: string;
+        deviceName?: string;
         [key: string]: any;
     } = $props();
 
@@ -40,20 +29,39 @@
 
     let engagement = $state(0);
 
+    import mqtt from "mqtt";
+    import type { MqttClient } from "mqtt";
+    let client: MqttClient;
+
     onMount(() => {
-        const socket = new WebSocket("ws://localhost:8000/ws");
+        client = mqtt.connect("ws://localhost:9001");
 
-        socket.onmessage = (event) => {
-            console.log(event);
-            engagement = Number(event.data);
+        client.on("connect", () => {
+            console.log("MQTT connected");
+
+            client.subscribe(`CEMPU/${deviceName}/engagement`, (err) => {
+                if (!err) {
+                    client.publish(
+                        `CEMPU/${deviceName}/engagement`,
+                        `Hello mqtt ${deviceName}`,
+                    );
+                }
+            });
+        });
+
+        client.on("message", (topic, message) => {
+            console.log(topic, message.toString());
+            engagement = Number(message.toString());
+        });
+
+        return () => {
+            client?.end();
         };
-
-        return () => socket.close();
     });
 </script>
 
 <div class={groupVariants({ status, class: className })} {...rest}>
-    <p>Group: 1</p>
+    <p>Group: {groupName}</p>
     <p class="text-right">Status: {displayStatus}</p>
     <p class="col-span-2">Engagement score: {engagement}</p>
     <p class="col-span-2">Time: 00:12:13</p>
