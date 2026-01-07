@@ -45,7 +45,7 @@
     let engagement = $state(0);
 
     onMount(() => {
-        const socket = new WebSocket("ws://localhost:8000/ws");
+        const socket = new WebSocket(`ws://localhost:8000/ws/dev${groupId}`);
 
         socket.onmessage = (event) => {
             console.log(event);

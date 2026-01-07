@@ -9,7 +9,7 @@
     let status = $state("recording");
 
     onMount(() => {
-        const socket = new WebSocket(`ws://localhost:8000/ws/group/${groupId}`);
+        const socket = new WebSocket(`ws://localhost:8000/ws/dev${groupId}`);
 
         socket.onmessage = (event) => {
             console.log(event);
