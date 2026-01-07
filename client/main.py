@@ -19,10 +19,12 @@ IP_ADDRESS = "192.168.0.7"
 START_COMMAND = "START"
 PAUSE_COMMAND = "PAUSE"
 STOP_N_SEND_COMMAND = "STOP"
+EXIT_COMMAND = "EXIT"
 
 stop_flag = True
 start_flag = False
 pause_flag = False
+exit_flag = False
 
 audio_queue = queue.Queue()
 
@@ -36,6 +38,7 @@ def on_message_cempu(client, userdata, msg):
     global stop_flag
     global start_flag
     global pause_flag
+    global exit_flag
     message = msg.payload.decode()
     if message == START_COMMAND and (stop_flag is True or pause_flag is True) and start_flag is False:
         stop_flag = False
@@ -52,8 +55,13 @@ def on_message_cempu(client, userdata, msg):
         pause_flag = True
         stop_flag = False
         print("PAUSED")
-    else:
-        print(msg.topic, message)
+    elif message == EXIT_COMMAND:
+        start_flag = False
+        pause_flag = False
+        stop_flag = True
+        exit_flag = True
+        print("Exiting")
+    print(msg.topic, message)
 
 
 def upload_file(file_path: str, server_url: str, timeout: int = 300):
@@ -70,9 +78,8 @@ def processChunk(in_data, frame_count, time_info, status):
     audio_queue.put(in_data)
     return (None, pyaudio.paContinue)
 
-def record_audio():
-
-    with CempuMQTT("dev1", callback=on_message_cempu) as mqtt:
+def record_audio(mqtt):
+        frames = []
 
         stream = p.open(format=FORMAT, input_device_index= AUDIO_DEVICE_INDEX,
                         channels=CHANNELS,
@@ -80,12 +87,13 @@ def record_audio():
                         input=True,
                         frames_per_buffer=CHUNK,
                         stream_callback=processChunk)
-
+        
         print("* recording")
 
         while True:
             in_data = audio_queue.get()
             if pause_flag is False:
+                print("running")
                 frames.append(in_data)
                 
                 block = np.frombuffer(in_data, dtype=np.int16).astype(np.float32) / 32768.0
@@ -98,7 +106,6 @@ def record_audio():
                 print("* Stopping recording")
                 stream.stop_stream()
                 stream.close()
-                p.terminate()
 
                 print(f"* Saving recording to {WAVE_OUTPUT_FILENAME}...")
                 with wave.open(WAVE_OUTPUT_FILENAME, 'wb') as wf:
@@ -111,12 +118,20 @@ def record_audio():
                 print("* Uploading the file to the server")
                 upload_file(WAVE_OUTPUT_FILENAME, IP_ADDRESS)
                 print("* Done uploading")
-                break;
+                break
+        
             
 def main():
-    while True:
-        if start_flag is True:
-            record_audio()
+    print("stopped")
+    with CempuMQTT("dev1", callback=on_message_cempu) as mqtt:
+        while True:
+            if exit_flag is True:
+                break
+            if start_flag is True:
+                print("running")
+                record_audio(mqtt)
+    p.terminate()
+        
 
 if __name__ == "__main__":
     main()
