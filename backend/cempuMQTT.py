@@ -1,5 +1,6 @@
 import asyncio
 import logging
+from imaplib import Commands
 
 import paho.mqtt.client as mqtt
 
@@ -69,5 +70,5 @@ class CempuMQTT:
         self.client.publish(topic, engagement, qos=1)
 
     def sendCommand(self, command: int, deviceID: str) -> None:
-        topic = ENGAGEMENT_TOPIC.format(deviceID)
+        topic = COMMAND_TOPIC.format(deviceID)
         self.client.publish(topic, command, qos=1)

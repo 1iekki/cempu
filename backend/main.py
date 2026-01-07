@@ -84,6 +84,7 @@ async def websocket_endpoint(websocket: WebSocket, device_id: str):
     await app.state.connectionManager.connect(websocket, device_id)
     try:
         while True:
-            await websocket.receive_text()
+            data = await websocket.receive_text()
+            app.state.mqtt.sendCommand(data, device_id)
     except WebSocketDisconnect:
         app.state.connectionManager.disconnect(websocket, device_id)

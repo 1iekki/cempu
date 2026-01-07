@@ -7,9 +7,10 @@
 
     let engagement = $state(0);
     let status = $state("recording");
+    let socket: WebSocket;
 
     onMount(() => {
-        const socket = new WebSocket(`ws://localhost:8000/ws/dev${groupId}`);
+        socket = new WebSocket(`ws://localhost:8000/ws/dev${groupId}`);
 
         socket.onmessage = (event) => {
             console.log(event);
@@ -23,13 +24,21 @@
         goto("/");
     }
 
-    function handleStart() {}
+    function handleStart() {
+        socket.send("1");
+    }
 
-    function handleStop() {}
+    function handleStop() {
+        socket.send("2");
+    }
 
-    function handlePause() {}
+    function handlePause() {
+        socket.send("3");
+    }
 
-    function handleAnalyze() {}
+    function handleAnalyze() {
+        socket.send("4");
+    }
 </script>
 
 <div class="w-full h-24 bg-blue-900 flex items-center px-8">
