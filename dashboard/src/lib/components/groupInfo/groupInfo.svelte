@@ -4,12 +4,13 @@
     import { goto } from "$app/navigation";
 
     const groupVariants = tv({
-        base: "grid grid-cols-2 grid-rows-3 rounded-md p-4 bg-gray-100 shadow-lg border-l-[20px]",
+        base: "grid grid-cols-2 grid-rows-3 rounded-md p-4 bg-gray-100 shadow-lg border-l-[20px] transition-all hover:shadow-xl",
         variants: {
             status: {
                 recording: "border-l-green-500 bg-green-50",
                 paused: "border-l-blue-500 bg-blue-50",
                 stopped: "border-l-red-500 bg-red-50",
+                analyzing: "border-l-grey-500 bg-grey-50"
             },
         },
         defaultVariants: {
@@ -36,6 +37,7 @@
         recording: "On",
         paused: "Paused",
         stopped: "Off",
+        analyzing: "Analyzing"
     };
 
     let displayStatus = $derived(statusTextMap[status]);
