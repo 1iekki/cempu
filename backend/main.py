@@ -1,10 +1,13 @@
 import asyncio
+from concurrent.futures import ProcessPoolExecutor
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
-
 from contextlib import asynccontextmanager
+import analysisParams
 from cempuMQTT import CempuMQTT
 from connectionManager import ConnectionManager
+from contextClassifier import ContextClassifier
+from contextProcessor import ContextProcessor
 
 async def handleMQTTMessages(queue: asyncio.Queue, manager: ConnectionManager):
     while True:
@@ -35,6 +38,8 @@ async def lifespan(app: FastAPI):
         worker_task.cancel()
 
 app = FastAPI(lifespan=lifespan)
+tasks = {}
+executor = ProcessPoolExecutor()
 
 html = """
 <!DOCTYPE html>
@@ -84,3 +89,35 @@ async def websocket_endpoint(websocket: WebSocket):
     except WebSocketDisconnect:
         app.state.connectionManager.disconnect(websocket)
         await app.state.connectionManager.broadcast(f"Client left the chat")
+
+def analyze(group_num:int) -> float:
+    path = f"{analysisParams.AUDIO_PATH}/{group_num}/rec.wav"
+    p = ContextProcessor(analysisParams.params)
+    clf = ContextClassifier(True)
+    res = p.process(path)
+    score = clf.getScore(res)
+    return score
+
+
+@app.post("/analyze/{group_num}")
+async def start_analysis(group_num:int):
+    loop = asyncio.get_running_loop()
+    task = loop.run_in_executor(executor, analyze, group_num)
+
+    if(tasks.get(group_num)):
+        tasks.get(group_num).cancel()
+    tasks[group_num] = task
+
+    return {
+        "message" : f"Analysis started for group {group_num}",
+        "audioPath" : f"{analysisParams.AUDIO_PATH}/{group_num}/rec.wav"
+        }
+
+@app.get("/analyze/{group_num}")
+async def get_analysis_results(group_num:int):
+    if not tasks.get(group_num):
+        return "TASK NOT FOUND"
+    if(tasks[group_num].done()):
+        return tasks[group_num].result()
+    else:
+        return "TASK IN PROGRESS"

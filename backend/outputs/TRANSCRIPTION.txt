@@ -1,0 +1,16 @@
+INTRO
+[00:38] 0 => okay so we have this sorting example 30 minutes we have to look at the array
+[00:43] 1 => okay
+[00:44] 0 => okay, so everybody look at the array
+[00:51] 2 => so, we take the first element yeah? 
+[00:57] 3 => and we put it to the new array
+[00:58] 2 => mhm
+[01:00] 2 => then we take the next element and we put it in the correct place in the sorted array yeah?
+[01:06] 0 => yeah
+[01:19] 2 => yeah, okay?
+[01:20] 0 => okay lets go with the excersise 1
+[01:23] 1 => how many times (...) 8
+[01:26] 0 => 8? okay. maybe 9 because its 0 i dont know
+[]
+
+
