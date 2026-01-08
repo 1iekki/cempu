@@ -3,8 +3,16 @@ name = "cempu-backend"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = "==3.12.12"
 dependencies = [
-    "fastapi[standard]>=0.124.4",
-    "paho-mqtt>=2.1.0",
+    "fastapi[standard]==0.124.4",
+    "imblearn==0.0",
+    "openai==2.8.1",
+    "openai-whisper==20250625",
+    "paho-mqtt==2.1.0",
+    "pyannote-audio==4.0.1",
+    "python-dotenv==1.2.1",
+    "scikit-learn==1.7.2",
+    "sentence-transformers==5.1.2",
+    "whisper==1.1.10",
 ]

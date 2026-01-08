@@ -1,0 +1,1560 @@
+[0.0034] << 0.00 : 2.00 =>  I will close the door
+{ pos_score: 0.0964, neg_score: 0.1587, topic_score: 0.0658, keyword_count: 0 }
+
+[0.0066] << 2.00 : 4.00 =>  Yes
+{ pos_score: 0.0635, neg_score: 0.1118, topic_score: 0.0549, keyword_count: 0 }
+
+[0.1914] << 4.00 : 6.00 =>  We are recording
+{ pos_score: 0.2608, neg_score: 0.1635, topic_score: 0.0942, keyword_count: 0 }
+
+[0.1542] << 6.00 : 8.00 =>  Please do not do this
+{ pos_score: 0.1613, neg_score: 0.1411, topic_score: 0.1340, keyword_count: 0 }
+
+[0.1828] << 8.00 : 10.00 =>  We will be doing the job
+{ pos_score: 0.1898, neg_score: 0.1164, topic_score: 0.1094, keyword_count: 0 }
+
+[0.1543] << 10.00 : 12.00 =>  We will be on the role
+{ pos_score: 0.1574, neg_score: 0.1405, topic_score: 0.1373, keyword_count: 0 }
+
+[0.2776] << 12.00 : 14.00 =>  The manager, the director, the director and the reflector
+{ pos_score: 0.1970, neg_score: 0.1262, topic_score: 0.2068, keyword_count: 0 }
+
+[0.0969] << 14.00 : 16.00 =>  I don't know
+{ pos_score: 0.0925, neg_score: 0.0857, topic_score: 0.0901, keyword_count: 0 }
+
+[0.0120] << 16.00 : 18.00 =>  I don't have to present
+{ pos_score: 0.1679, neg_score: 0.2613, topic_score: 0.1054, keyword_count: 0 }
+
+[0.4347] << 18.00 : 20.00 =>  What team number?
+{ pos_score: 0.3140, neg_score: 0.0551, topic_score: 0.1259, keyword_count: 1 }
+
+[0.3223] << 20.00 : 22.00 =>  4
+{ pos_score: 0.2371, neg_score: 0.0785, topic_score: 0.1638, keyword_count: 0 }
+
+[0.1246] << 22.00 : 24.00 =>  4, I'm a gay man
+{ pos_score: 0.1540, neg_score: 0.1119, topic_score: 0.0825, keyword_count: 0 }
+
+[0.4617] << 24.00 : 26.00 =>  4 team number
+{ pos_score: 0.3255, neg_score: 0.0546, topic_score: 0.1408, keyword_count: 1 }
+
+[0.1821] << 26.00 : 30.00 =>  And the other thing is we are doing in Polish or English?
+{ pos_score: 0.2215, neg_score: 0.1814, topic_score: 0.1420, keyword_count: 0 }
+
+[0.2173] << 30.00 : 32.00 =>  In English
+{ pos_score: 0.2242, neg_score: 0.1553, topic_score: 0.1484, keyword_count: 0 }
+
+[0.2413] << 32.00 : 34.00 =>  Ok, because he is on the top of the level
+{ pos_score: 0.2145, neg_score: 0.1008, topic_score: 0.1276, keyword_count: 0 }
+
+[-0.0241] << 34.00 : 36.00 =>  No, no
+{ pos_score: 0.0835, neg_score: 0.1577, topic_score: 0.0501, keyword_count: 0 }
+
+[0.1016] << 36.00 : 38.00 =>  No problem
+{ pos_score: 0.1165, neg_score: 0.1760, topic_score: 0.1611, keyword_count: 0 }
+
+[0.5783] << 38.00 : 40.00 =>  Ok, we have to sort the example
+{ pos_score: 0.4722, neg_score: 0.4508, topic_score: 0.5569, keyword_count: 0 }
+
+[0.0121] << 40.00 : 42.00 =>  30 minutes
+{ pos_score: 0.1268, neg_score: 0.1525, topic_score: 0.0378, keyword_count: 0 }
+
+[0.9711] << 42.00 : 44.00 =>  We have to look at the array
+{ pos_score: 0.5170, neg_score: 0.0997, topic_score: 0.5038, keyword_count: 1 }
+
+[0.2136] << 44.00 : 46.00 =>  Ok, ok
+{ pos_score: 0.1627, neg_score: 0.1514, topic_score: 0.2023, keyword_count: 0 }
+
+[0.7024] << 46.00 : 48.00 =>  Everybody look at the array
+{ pos_score: 0.5002, neg_score: 0.2462, topic_score: 0.3984, keyword_count: 1 }
+
+[0.8221] << 52.00 : 54.00 =>  So, we take the first element
+{ pos_score: 0.3718, neg_score: 0.0671, topic_score: 0.4675, keyword_count: 1 }
+
+[-0.0458] << 54.00 : 56.00 =>  Yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.7965] << 56.00 : 58.00 =>  Yes, and we put it in a new array
+{ pos_score: 0.5086, neg_score: 0.1230, topic_score: 0.3609, keyword_count: 1 }
+
+[0.0976] << 58.00 : 60.00 =>  Mhm
+{ pos_score: 0.0886, neg_score: 0.0624, topic_score: 0.0714, keyword_count: 0 }
+
+[0.9456] << 60.00 : 62.00 =>  Then we take the next element
+{ pos_score: 0.4494, neg_score: 0.1061, topic_score: 0.5023, keyword_count: 2 }
+
+[0.3741] << 62.00 : 64.00 =>  And we put it in the correct place
+{ pos_score: 0.3128, neg_score: 0.1944, topic_score: 0.2557, keyword_count: 0 }
+
+[1.0354] << 64.00 : 66.00 =>  In the sorted array
+{ pos_score: 0.6839, neg_score: 0.4372, topic_score: 0.6887, keyword_count: 2 }
+
+[-0.0754] << 66.00 : 68.00 =>  Yeah?
+{ pos_score: 0.0933, neg_score: 0.1740, topic_score: 0.0052, keyword_count: 0 }
+
+[-0.0499] << 68.00 : 70.00 =>  Yeah, I guess so
+{ pos_score: 0.0718, neg_score: 0.1342, topic_score: 0.0125, keyword_count: 0 }
+
+[0.0420] << 78.00 : 80.00 =>  Yeah, ok
+{ pos_score: 0.1092, neg_score: 0.1899, topic_score: 0.1227, keyword_count: 0 }
+
+[0.3923] << 80.00 : 82.00 =>  Ok, let's go with the exercise one
+{ pos_score: 0.2132, neg_score: 0.1052, topic_score: 0.2843, keyword_count: 0 }
+
+[0.4238] << 82.00 : 84.00 =>  How many time steps are shown?
+{ pos_score: 0.2644, neg_score: 0.0350, topic_score: 0.1944, keyword_count: 0 }
+
+[0.2897] << 84.00 : 86.00 =>  8
+{ pos_score: 0.1783, neg_score: 0.1233, topic_score: 0.2347, keyword_count: 0 }
+
+[0.3906] << 86.00 : 87.00 =>  8?
+{ pos_score: 0.2619, neg_score: 0.1071, topic_score: 0.2358, keyword_count: 0 }
+
+[0.2227] << 87.00 : 88.00 =>  Ok
+{ pos_score: 0.1404, neg_score: 0.1352, topic_score: 0.2175, keyword_count: 0 }
+
+[0.2227] << 88.00 : 89.00 =>  Ok
+{ pos_score: 0.1404, neg_score: 0.1352, topic_score: 0.2175, keyword_count: 0 }
+
+[0.4058] << 89.00 : 90.00 =>  It will be 8
+{ pos_score: 0.2100, neg_score: 0.0922, topic_score: 0.2880, keyword_count: 0 }
+
+[0.0973] << 90.00 : 91.00 =>  Should it
+{ pos_score: 0.0922, neg_score: 0.0928, topic_score: 0.0978, keyword_count: 0 }
+
+[0.2920] << 91.00 : 92.00 =>  Maybe 9
+{ pos_score: 0.2534, neg_score: 0.1392, topic_score: 0.1778, keyword_count: 0 }
+
+[0.3222] << 92.00 : 93.00 =>  Because it's 0
+{ pos_score: 0.2181, neg_score: 0.0319, topic_score: 0.1360, keyword_count: 0 }
+
+[0.0969] << 93.00 : 94.00 =>  I don't know
+{ pos_score: 0.0925, neg_score: 0.0857, topic_score: 0.0901, keyword_count: 0 }
+
+[-0.0167] << 94.00 : 95.00 =>  Ah, yeah
+{ pos_score: 0.1230, neg_score: 0.1616, topic_score: 0.0219, keyword_count: 0 }
+
+[-0.0614] << 95.00 : 96.00 =>  Yeah, yeah
+{ pos_score: 0.0773, neg_score: 0.1425, topic_score: 0.0037, keyword_count: 0 }
+
+[0.3077] << 96.00 : 97.00 =>  9
+{ pos_score: 0.2346, neg_score: 0.0904, topic_score: 0.1635, keyword_count: 0 }
+
+[-0.0316] << 97.00 : 98.00 =>  It's a bait
+{ pos_score: 0.0121, neg_score: 0.0187, topic_score: -0.0251, keyword_count: 0 }
+
+[0.1181] << 98.00 : 99.00 =>  A bait question
+{ pos_score: 0.0929, neg_score: 0.0715, topic_score: 0.0967, keyword_count: 0 }
+
+[0.8735] << 99.00 : 103.00 =>  How many slots are in the input array and the output array?
+{ pos_score: 0.4629, neg_score: 0.1153, topic_score: 0.4759, keyword_count: 1 }
+
+[0.2897] << 105.00 : 107.00 =>  8
+{ pos_score: 0.1783, neg_score: 0.1233, topic_score: 0.2347, keyword_count: 0 }
+
+[-0.0458] << 107.00 : 108.00 =>  Yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[-0.0207] << 108.00 : 110.00 =>  Kuba don't sleep
+{ pos_score: 0.0606, neg_score: 0.0703, topic_score: -0.0110, keyword_count: 0 }
+
+[0.0969] << 110.00 : 112.00 =>  I don't know
+{ pos_score: 0.0925, neg_score: 0.0857, topic_score: 0.0901, keyword_count: 0 }
+
+[0.0969] << 112.00 : 113.00 =>  I don't know
+{ pos_score: 0.0925, neg_score: 0.0857, topic_score: 0.0901, keyword_count: 0 }
+
+[0.5223] << 113.00 : 116.00 =>  In each time step how many slots are empty?
+{ pos_score: 0.2389, neg_score: 0.0276, topic_score: 0.3110, keyword_count: 0 }
+
+[0.2897] << 116.00 : 117.00 =>  8
+{ pos_score: 0.1783, neg_score: 0.1233, topic_score: 0.2347, keyword_count: 0 }
+
+[0.2886] << 117.00 : 118.00 =>  8, ok
+{ pos_score: 0.1580, neg_score: 0.0816, topic_score: 0.2123, keyword_count: 0 }
+
+[0.9303] << 118.00 : 123.00 =>  What value goes into the output array first?
+{ pos_score: 0.5622, neg_score: 0.1518, topic_score: 0.4698, keyword_count: 1 }
+
+[0.1296] << 123.00 : 125.00 =>  61
+{ pos_score: 0.2225, neg_score: 0.1375, topic_score: 0.0445, keyword_count: 0 }
+
+[0.3934] << 125.00 : 128.00 =>  How many slots are empty?
+{ pos_score: 0.1680, neg_score: 0.0437, topic_score: 0.2692, keyword_count: 0 }
+
+[-0.0458] << 128.00 : 129.00 =>  Yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.2464] << 129.00 : 131.00 =>  What does this mean?
+{ pos_score: 0.1773, neg_score: 0.0792, topic_score: 0.1482, keyword_count: 0 }
+
+[0.2493] << 131.00 : 132.00 =>  7 here and 1 here
+{ pos_score: 0.1864, neg_score: 0.1093, topic_score: 0.1722, keyword_count: 0 }
+
+[0.2136] << 132.00 : 133.00 =>  Ok, ok
+{ pos_score: 0.1627, neg_score: 0.1514, topic_score: 0.2023, keyword_count: 0 }
+
+[0.2227] << 133.00 : 134.00 =>  Ok
+{ pos_score: 0.1404, neg_score: 0.1352, topic_score: 0.2175, keyword_count: 0 }
+
+[-0.0458] << 134.00 : 135.00 =>  Yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.8691] << 135.00 : 139.00 =>  What was that values index in the input array?
+{ pos_score: 0.4625, neg_score: 0.1605, topic_score: 0.4671, keyword_count: 2 }
+
+[0.2316] << 139.00 : 140.00 =>  0
+{ pos_score: 0.1765, neg_score: 0.0951, topic_score: 0.1502, keyword_count: 0 }
+
+[0.1310] << 140.00 : 141.00 =>  Mm-hmm
+{ pos_score: 0.1386, neg_score: 0.1781, topic_score: 0.1705, keyword_count: 0 }
+
+[0.8840] << 141.00 : 145.00 =>  What value goes into the output array second?
+{ pos_score: 0.4920, neg_score: 0.1115, topic_score: 0.4535, keyword_count: 1 }
+
+[0.2571] << 145.00 : 146.00 =>  44
+{ pos_score: 0.2467, neg_score: 0.0984, topic_score: 0.1088, keyword_count: 0 }
+
+[0.1712] << 146.00 : 147.00 =>  43?
+{ pos_score: 0.2409, neg_score: 0.1575, topic_score: 0.0877, keyword_count: 0 }
+
+[0.2204] << 147.00 : 148.00 =>  No, no, 44
+{ pos_score: 0.2563, neg_score: 0.1325, topic_score: 0.0967, keyword_count: 0 }
+
+[0.8691] << 148.00 : 159.00 =>  What was that values index in the input array?
+{ pos_score: 0.4625, neg_score: 0.1605, topic_score: 0.4671, keyword_count: 2 }
+
+[0.3006] << 159.00 : 160.00 =>  1
+{ pos_score: 0.1974, neg_score: 0.0917, topic_score: 0.1950, keyword_count: 0 }
+
+[0.2227] << 160.00 : 161.00 =>  Ok
+{ pos_score: 0.1404, neg_score: 0.1352, topic_score: 0.2175, keyword_count: 0 }
+
+[0.8601] << 161.00 : 163.00 =>  What value goes into the output array last?
+{ pos_score: 0.5029, neg_score: 0.1310, topic_score: 0.4381, keyword_count: 1 }
+
+[0.1278] << 163.00 : 164.00 =>  38
+{ pos_score: 0.1994, neg_score: 0.1679, topic_score: 0.0963, keyword_count: 0 }
+
+[0.4977] << 164.00 : 165.00 =>  What was the values index in the...
+{ pos_score: 0.2911, neg_score: 0.1622, topic_score: 0.3189, keyword_count: 1 }
+
+[0.2972] << 165.00 : 166.00 =>  7
+{ pos_score: 0.2302, neg_score: 0.0994, topic_score: 0.1664, keyword_count: 0 }
+
+[0.1052] << 166.00 : 167.00 =>  Ok, we did it
+{ pos_score: 0.1444, neg_score: 0.1693, topic_score: 0.1301, keyword_count: 0 }
+
+[0.0454] << 167.00 : 168.00 =>  Yay
+{ pos_score: 0.0654, neg_score: 0.0841, topic_score: 0.0641, keyword_count: 0 }
+
+[0.2227] << 168.00 : 169.00 =>  Ok
+{ pos_score: 0.1404, neg_score: 0.1352, topic_score: 0.2175, keyword_count: 0 }
+
+[0.6267] << 169.00 : 170.00 =>  In complete sentences explain the sorting algorithm above.
+{ pos_score: 0.6382, neg_score: 0.5514, topic_score: 0.5399, keyword_count: 0 }
+
+[-0.0519] << 170.00 : 171.00 =>  Oh no, no, no, no, no, me
+{ pos_score: 0.0525, neg_score: 0.1301, topic_score: 0.0257, keyword_count: 0 }
+
+[-0.1106] << 171.00 : 172.00 =>  Tell me
+{ pos_score: 0.0817, neg_score: 0.2352, topic_score: 0.0428, keyword_count: 0 }
+
+[0.0093] << 172.00 : 173.00 =>  Why me?
+{ pos_score: 0.0698, neg_score: 0.0750, topic_score: 0.0145, keyword_count: 0 }
+
+[0.1576] << 173.00 : 174.00 =>  How will I write?
+{ pos_score: 0.2224, neg_score: 0.2385, topic_score: 0.1738, keyword_count: 0 }
+
+[1.0176] << 174.00 : 199.00 =>  So it takes the element from the input array and puts it in the sorted array in the correct place.
+{ pos_score: 0.6496, neg_score: 0.3899, topic_score: 0.6079, keyword_count: 3 }
+
+[0.7962] << 199.00 : 200.00 =>  In output array.
+{ pos_score: 0.4555, neg_score: 0.0804, topic_score: 0.3711, keyword_count: 1 }
+
+[0.0008] << 200.00 : 201.00 =>  Yeah, see.
+{ pos_score: 0.1089, neg_score: 0.1549, topic_score: 0.0468, keyword_count: 0 }
+
+[0.2227] << 201.00 : 202.00 =>  Ok
+{ pos_score: 0.1404, neg_score: 0.1352, topic_score: 0.2175, keyword_count: 0 }
+
+[0.0733] << 202.00 : 203.00 =>  That's great.
+{ pos_score: 0.1104, neg_score: 0.1303, topic_score: 0.0933, keyword_count: 0 }
+
+[0.0584] << 203.00 : 205.00 =>  I don't have a fancy angle right to...
+{ pos_score: 0.0757, neg_score: 0.1289, topic_score: 0.1116, keyword_count: 0 }
+
+[0.7641] << 205.00 : 212.00 =>  So it's so it's that when this algorithm is applied to the array shown that right.
+{ pos_score: 0.4237, neg_score: 0.1955, topic_score: 0.4859, keyword_count: 1 }
+
+[0.1023] << 212.00 : 214.00 =>  Ok, right.
+{ pos_score: 0.1065, neg_score: 0.1329, topic_score: 0.1287, keyword_count: 0 }
+
+[0.4324] << 214.00 : 216.00 =>  7, 24, 52.
+{ pos_score: 0.3147, neg_score: 0.0800, topic_score: 0.1977, keyword_count: 0 }
+
+[0.1023] << 216.00 : 217.00 =>  Ok, right.
+{ pos_score: 0.1065, neg_score: 0.1329, topic_score: 0.1287, keyword_count: 0 }
+
+[0.4324] << 217.00 : 218.00 =>  7, 24, 52.
+{ pos_score: 0.3147, neg_score: 0.0800, topic_score: 0.1977, keyword_count: 0 }
+
+[0.1023] << 218.00 : 219.00 =>  Ok, right.
+{ pos_score: 0.1065, neg_score: 0.1329, topic_score: 0.1287, keyword_count: 0 }
+
+[0.4324] << 219.00 : 220.00 =>  7, 24, 52.
+{ pos_score: 0.3147, neg_score: 0.0800, topic_score: 0.1977, keyword_count: 0 }
+
+[0.7988] << 220.00 : 225.00 =>  Ok, so it's that when this algorithm is applied to the array shown that right.
+{ pos_score: 0.4334, neg_score: 0.1916, topic_score: 0.5070, keyword_count: 1 }
+
+[0.1023] << 225.00 : 226.00 =>  Ok, right.
+{ pos_score: 0.1065, neg_score: 0.1329, topic_score: 0.1287, keyword_count: 0 }
+
+[0.4324] << 226.00 : 228.00 =>  7, 24, 52.
+{ pos_score: 0.3147, neg_score: 0.0800, topic_score: 0.1977, keyword_count: 0 }
+
+[0.3280] << 228.00 : 233.00 =>  No, no, you take the first thing so it's 39.
+{ pos_score: 0.2477, neg_score: 0.0685, topic_score: 0.1488, keyword_count: 0 }
+
+[0.2058] << 233.00 : 234.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.0194] << 234.00 : 235.00 =>  And it's not here.
+{ pos_score: 0.0692, neg_score: 0.0747, topic_score: 0.0249, keyword_count: 0 }
+
+[0.1684] << 235.00 : 236.00 =>  Start.
+{ pos_score: 0.1187, neg_score: 0.1566, topic_score: 0.2063, keyword_count: 0 }
+
+[-0.0038] << 236.00 : 237.00 =>  Yes.
+{ pos_score: 0.0624, neg_score: 0.1092, topic_score: 0.0430, keyword_count: 0 }
+
+[0.1886] << 237.00 : 240.00 =>  But you go like left to right.
+{ pos_score: 0.1308, neg_score: 0.1087, topic_score: 0.1665, keyword_count: 0 }
+
+[-0.0401] << 240.00 : 241.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[-0.0401] << 241.00 : 242.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[-0.0401] << 242.00 : 243.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.0382] << 243.00 : 244.00 =>  It's ok.
+{ pos_score: 0.1488, neg_score: 0.2080, topic_score: 0.0974, keyword_count: 0 }
+
+[0.7639] << 244.00 : 245.00 =>  You take the first element.
+{ pos_score: 0.3424, neg_score: 0.0416, topic_score: 0.4131, keyword_count: 1 }
+
+[-0.0099] << 245.00 : 246.00 =>  Not here.
+{ pos_score: 0.1105, neg_score: 0.1793, topic_score: 0.0589, keyword_count: 0 }
+
+[-0.0099] << 246.00 : 247.00 =>  Not here.
+{ pos_score: 0.1105, neg_score: 0.1793, topic_score: 0.0589, keyword_count: 0 }
+
+[0.0779] << 247.00 : 248.00 =>  Ah, yeah, ok.
+{ pos_score: 0.1234, neg_score: 0.1560, topic_score: 0.1105, keyword_count: 0 }
+
+[0.0040] << 248.00 : 249.00 =>  Yeah, right.
+{ pos_score: 0.0832, neg_score: 0.1368, topic_score: 0.0576, keyword_count: 0 }
+
+[0.3050] << 249.00 : 250.00 =>  In the second line.
+{ pos_score: 0.2364, neg_score: 0.1119, topic_score: 0.1805, keyword_count: 0 }
+
+[0.3050] << 250.00 : 251.00 =>  In the second line.
+{ pos_score: 0.2364, neg_score: 0.1119, topic_score: 0.1805, keyword_count: 0 }
+
+[0.3285] << 251.00 : 252.00 =>  First one is on.
+{ pos_score: 0.1966, neg_score: 0.1105, topic_score: 0.2425, keyword_count: 0 }
+
+[0.1636] << 252.00 : 253.00 =>  No, it doesn't matter.
+{ pos_score: 0.1610, neg_score: 0.1129, topic_score: 0.1156, keyword_count: 0 }
+
+[-0.0530] << 253.00 : 254.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 254.00 : 255.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 255.00 : 256.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 256.00 : 257.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 257.00 : 258.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 258.00 : 259.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 259.00 : 260.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 260.00 : 261.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 261.00 : 262.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 262.00 : 263.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 263.00 : 264.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0530] << 264.00 : 265.00 =>  It does.
+{ pos_score: 0.0717, neg_score: 0.0703, topic_score: -0.0543, keyword_count: 0 }
+
+[-0.0761] << 265.00 : 266.00 =>  It's a baby, no.
+{ pos_score: 0.0237, neg_score: 0.0888, topic_score: -0.0109, keyword_count: 0 }
+
+[0.4557] << 266.00 : 268.00 =>  Ok, then it's 7, 39.
+{ pos_score: 0.3449, neg_score: 0.0847, topic_score: 0.1956, keyword_count: 0 }
+
+[0.3718] << 268.00 : 270.00 =>  7, 39.
+{ pos_score: 0.2899, neg_score: 0.0882, topic_score: 0.1702, keyword_count: 0 }
+
+[0.3908] << 270.00 : 272.00 =>  59, 24, 52.
+{ pos_score: 0.3004, neg_score: 0.0887, topic_score: 0.1791, keyword_count: 0 }
+
+[0.2885] << 272.00 : 273.00 =>  And 52.
+{ pos_score: 0.2457, neg_score: 0.0810, topic_score: 0.1238, keyword_count: 0 }
+
+[0.1620] << 273.00 : 274.00 =>  And...
+{ pos_score: 0.1431, neg_score: 0.0918, topic_score: 0.1107, keyword_count: 0 }
+
+[0.2266] << 274.00 : 275.00 =>  52.
+{ pos_score: 0.2456, neg_score: 0.0975, topic_score: 0.0785, keyword_count: 0 }
+
+[0.3015] << 275.00 : 276.00 =>  7.
+{ pos_score: 0.2177, neg_score: 0.1096, topic_score: 0.1934, keyword_count: 0 }
+
+[0.2589] << 276.00 : 277.00 =>  39, 52.
+{ pos_score: 0.2527, neg_score: 0.1156, topic_score: 0.1218, keyword_count: 0 }
+
+[0.1430] << 277.00 : 278.00 =>  What?
+{ pos_score: 0.1628, neg_score: 0.1699, topic_score: 0.1502, keyword_count: 0 }
+
+[0.0134] << 278.00 : 279.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.2589] << 279.00 : 280.00 =>  39, 52.
+{ pos_score: 0.2527, neg_score: 0.1156, topic_score: 0.1218, keyword_count: 0 }
+
+[0.3774] << 280.00 : 285.00 =>  Because you put it after the 39.
+{ pos_score: 0.2365, neg_score: 0.0244, topic_score: 0.1654, keyword_count: 0 }
+
+[-0.0401] << 285.00 : 286.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.2356] << 286.00 : 287.00 =>  39.
+{ pos_score: 0.2541, neg_score: 0.1264, topic_score: 0.1079, keyword_count: 0 }
+
+[0.2356] << 287.00 : 288.00 =>  39.
+{ pos_score: 0.2541, neg_score: 0.1264, topic_score: 0.1079, keyword_count: 0 }
+
+[0.2356] << 288.00 : 289.00 =>  39.
+{ pos_score: 0.2541, neg_score: 0.1264, topic_score: 0.1079, keyword_count: 0 }
+
+[0.2356] << 289.00 : 290.00 =>  39.
+{ pos_score: 0.2541, neg_score: 0.1264, topic_score: 0.1079, keyword_count: 0 }
+
+[0.1343] << 290.00 : 291.00 =>  But this goes here.
+{ pos_score: 0.1593, neg_score: 0.1403, topic_score: 0.1153, keyword_count: 0 }
+
+[-0.0401] << 291.00 : 292.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.1430] << 292.00 : 293.00 =>  What?
+{ pos_score: 0.1628, neg_score: 0.1699, topic_score: 0.1502, keyword_count: 0 }
+
+[0.0134] << 293.00 : 294.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.6403] << 294.00 : 295.00 =>  Because you take the elements one by one.
+{ pos_score: 0.3053, neg_score: 0.0231, topic_score: 0.3081, keyword_count: 1 }
+
+[0.2838] << 295.00 : 296.00 =>  Yeah, and then you put it in the right place.
+{ pos_score: 0.2290, neg_score: 0.0956, topic_score: 0.1504, keyword_count: 0 }
+
+[0.0800] << 296.00 : 297.00 =>  Yeah, so 24 goes here.
+{ pos_score: 0.0862, neg_score: 0.1176, topic_score: 0.1113, keyword_count: 0 }
+
+[0.2030] << 297.00 : 298.00 =>  Oh, it's 24 and not 52.
+{ pos_score: 0.1955, neg_score: 0.0794, topic_score: 0.0869, keyword_count: 0 }
+
+[-0.0401] << 298.00 : 299.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.3097] << 299.00 : 301.00 =>  And then all of them are at the end.
+{ pos_score: 0.2430, neg_score: 0.1023, topic_score: 0.1691, keyword_count: 0 }
+
+[-0.0401] << 301.00 : 302.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.0599] << 302.00 : 303.00 =>  Yeah, ok.
+{ pos_score: 0.1154, neg_score: 0.1710, topic_score: 0.1154, keyword_count: 0 }
+
+[0.2058] << 303.00 : 304.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[-0.0038] << 305.00 : 306.00 =>  Yes.
+{ pos_score: 0.0624, neg_score: 0.1092, topic_score: 0.0430, keyword_count: 0 }
+
+[-0.0028] << 306.00 : 310.00 =>  The pigeons ate all of the cherries.
+{ pos_score: 0.0654, neg_score: 0.0949, topic_score: 0.0267, keyword_count: 0 }
+
+[-0.0333] << 310.00 : 312.00 =>  My neighbors.
+{ pos_score: 0.1157, neg_score: 0.2211, topic_score: 0.0721, keyword_count: 0 }
+
+[0.2058] << 312.00 : 313.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.0182] << 313.00 : 318.00 =>  Thanks for the info.
+{ pos_score: 0.1291, neg_score: 0.1766, topic_score: 0.0656, keyword_count: 0 }
+
+[0.0425] << 318.00 : 319.00 =>  I guess.
+{ pos_score: 0.1367, neg_score: 0.1772, topic_score: 0.0830, keyword_count: 0 }
+
+[0.0243] << 319.00 : 321.00 =>  Yeah, that was crazy, man.
+{ pos_score: 0.1169, neg_score: 0.1382, topic_score: 0.0456, keyword_count: 0 }
+
+[0.0697] << 321.00 : 322.00 =>  That was crazy.
+{ pos_score: 0.1363, neg_score: 0.1618, topic_score: 0.0951, keyword_count: 0 }
+
+[0.3293] << 322.00 : 325.00 =>  The table above illustrates a symbol.
+{ pos_score: 0.1851, neg_score: 0.0132, topic_score: 0.1574, keyword_count: 0 }
+
+[0.1446] << 325.00 : 326.00 =>  One day there were...
+{ pos_score: 0.1126, neg_score: 0.0785, topic_score: 0.1106, keyword_count: 0 }
+
+[0.1948] << 326.00 : 328.00 =>  It was a 4-3 full of cherries.
+{ pos_score: 0.1353, neg_score: 0.0642, topic_score: 0.1237, keyword_count: 0 }
+
+[0.0166] << 328.00 : 329.00 =>  Shut up.
+{ pos_score: 0.2352, neg_score: 0.2769, topic_score: 0.0583, keyword_count: 0 }
+
+[0.0166] << 329.00 : 330.00 =>  Shut up.
+{ pos_score: 0.2352, neg_score: 0.2769, topic_score: 0.0583, keyword_count: 0 }
+
+[0.0784] << 330.00 : 332.00 =>  It was clear.
+{ pos_score: 0.1620, neg_score: 0.1071, topic_score: 0.0235, keyword_count: 0 }
+
+[-0.0388] << 332.00 : 334.00 =>  Man, it's crazy.
+{ pos_score: 0.1339, neg_score: 0.1706, topic_score: -0.0020, keyword_count: 0 }
+
+[0.4238] << 334.00 : 337.00 =>  How many time steps are shown?
+{ pos_score: 0.2644, neg_score: 0.0350, topic_score: 0.1944, keyword_count: 0 }
+
+[-0.0180] << 337.00 : 339.00 =>  He looked me in room.
+{ pos_score: 0.0753, neg_score: 0.1988, topic_score: 0.1055, keyword_count: 0 }
+
+[0.0204] << 339.00 : 340.00 =>  He he he.
+{ pos_score: 0.0703, neg_score: 0.1222, topic_score: 0.0723, keyword_count: 0 }
+
+[0.0128] << 340.00 : 341.00 =>  He he.
+{ pos_score: 0.0693, neg_score: 0.1125, topic_score: 0.0560, keyword_count: 0 }
+
+[0.0709] << 341.00 : 342.00 =>  That was crazy?
+{ pos_score: 0.1052, neg_score: 0.1088, topic_score: 0.0745, keyword_count: 0 }
+
+[-0.2443] << 342.00 : 343.00 =>  Mine.
+{ pos_score: 0.0082, neg_score: 0.2247, topic_score: -0.0277, keyword_count: 0 }
+
+[-0.1346] << 343.00 : 344.00 =>  I was crazy once.
+{ pos_score: 0.0356, neg_score: 0.1395, topic_score: -0.0307, keyword_count: 0 }
+
+[0.5563] << 344.00 : 345.00 =>  How many slots are in the right?
+{ pos_score: 0.2785, neg_score: 0.0476, topic_score: 0.3255, keyword_count: 0 }
+
+[0.1449] << 345.00 : 346.00 =>  Hmm.
+{ pos_score: 0.1843, neg_score: 0.2309, topic_score: 0.1916, keyword_count: 0 }
+
+[0.1697] << 346.00 : 347.00 =>  Right.
+{ pos_score: 0.1204, neg_score: 0.1293, topic_score: 0.1786, keyword_count: 0 }
+
+[0.1672] << 347.00 : 348.00 =>  Oops.
+{ pos_score: 0.1521, neg_score: 0.1663, topic_score: 0.1814, keyword_count: 0 }
+
+[0.1672] << 348.00 : 349.00 =>  Oops.
+{ pos_score: 0.1521, neg_score: 0.1663, topic_score: 0.1814, keyword_count: 0 }
+
+[0.5096] << 349.00 : 353.00 =>  In each time step how many...
+{ pos_score: 0.2798, neg_score: 0.0119, topic_score: 0.2416, keyword_count: 0 }
+
+[0.3212] << 353.00 : 356.00 =>  Slots are empty?
+{ pos_score: 0.1444, neg_score: 0.0508, topic_score: 0.2277, keyword_count: 0 }
+
+[-0.0038] << 356.00 : 357.00 =>  Yes.
+{ pos_score: 0.0624, neg_score: 0.1092, topic_score: 0.0430, keyword_count: 0 }
+
+[0.2595] << 357.00 : 358.00 =>  None.
+{ pos_score: 0.1818, neg_score: 0.0788, topic_score: 0.1565, keyword_count: 0 }
+
+[-0.0529] << 358.00 : 359.00 =>  Oh, yeah.
+{ pos_score: 0.1022, neg_score: 0.1615, topic_score: 0.0064, keyword_count: 0 }
+
+[-0.0529] << 359.00 : 360.00 =>  Oh, yeah.
+{ pos_score: 0.1022, neg_score: 0.1615, topic_score: 0.0064, keyword_count: 0 }
+
+[0.8610] << 360.00 : 361.00 =>  Ok, it's one array.
+{ pos_score: 0.4544, neg_score: 0.0217, topic_score: 0.3783, keyword_count: 1 }
+
+[0.2595] << 361.00 : 362.00 =>  None.
+{ pos_score: 0.1818, neg_score: 0.0788, topic_score: 0.1565, keyword_count: 0 }
+
+[-0.0401] << 362.00 : 363.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.2595] << 363.00 : 364.00 =>  None.
+{ pos_score: 0.1818, neg_score: 0.0788, topic_score: 0.1565, keyword_count: 0 }
+
+[0.1394] << 364.00 : 367.00 =>  What color is used for...
+{ pos_score: 0.1309, neg_score: 0.0314, topic_score: 0.0398, keyword_count: 0 }
+
+[0.6208] << 367.00 : 368.00 =>  ...sorted values?
+{ pos_score: 0.5261, neg_score: 0.4764, topic_score: 0.5211, keyword_count: 1 }
+
+[-0.0692] << 368.00 : 369.00 =>  Dark grey.
+{ pos_score: 0.0423, neg_score: 0.1150, topic_score: 0.0035, keyword_count: 0 }
+
+[-0.0692] << 369.00 : 370.00 =>  Dark grey.
+{ pos_score: 0.0423, neg_score: 0.1150, topic_score: 0.0035, keyword_count: 0 }
+
+[-0.1394] << 370.00 : 371.00 =>  Ok, it's dark grey.
+{ pos_score: -0.0039, neg_score: 0.1050, topic_score: -0.0305, keyword_count: 0 }
+
+[0.0543] << 371.00 : 372.00 =>  No problem.
+{ pos_score: 0.0915, neg_score: 0.1464, topic_score: 0.1092, keyword_count: 0 }
+
+[0.4870] << 372.00 : 377.00 =>  What color is used for sorted values?
+{ pos_score: 0.4400, neg_score: 0.3336, topic_score: 0.3306, keyword_count: 1 }
+
+[0.1050] << 377.00 : 378.00 =>  White.
+{ pos_score: 0.0769, neg_score: 0.0645, topic_score: 0.0925, keyword_count: 0 }
+
+[-0.0201] << 378.00 : 382.00 =>  Sorry, we don't use the name white.
+{ pos_score: 0.0161, neg_score: 0.0499, topic_score: 0.0137, keyword_count: 0 }
+
+[-0.1136] << 382.00 : 385.00 =>  It's culturally appropriate.
+{ pos_score: 0.0892, neg_score: 0.1886, topic_score: -0.0142, keyword_count: 0 }
+
+[-0.0473] << 385.00 : 386.00 =>  No, no.
+{ pos_score: 0.0711, neg_score: 0.1525, topic_score: 0.0341, keyword_count: 0 }
+
+[0.0368] << 386.00 : 387.00 =>  It's ok, it's ok.
+{ pos_score: 0.1637, neg_score: 0.2230, topic_score: 0.0961, keyword_count: 0 }
+
+[0.4404] << 387.00 : 388.00 =>  Better values.
+{ pos_score: 0.2920, neg_score: 0.0700, topic_score: 0.2184, keyword_count: 0 }
+
+[0.6513] << 388.00 : 397.00 =>  Which value is moved from the input to output first?
+{ pos_score: 0.4239, neg_score: 0.2313, topic_score: 0.4587, keyword_count: 0 }
+
+[0.0544] << 397.00 : 398.00 =>  Um...
+{ pos_score: 0.1327, neg_score: 0.1851, topic_score: 0.1067, keyword_count: 0 }
+
+[-0.0223] << 398.00 : 399.00 =>  Ah, yeah.
+{ pos_score: 0.1156, neg_score: 0.1688, topic_score: 0.0309, keyword_count: 0 }
+
+[0.1832] << 399.00 : 400.00 =>  61.
+{ pos_score: 0.2304, neg_score: 0.1132, topic_score: 0.0661, keyword_count: 0 }
+
+[0.2058] << 400.00 : 401.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.2617] << 401.00 : 402.00 =>  68.
+{ pos_score: 0.2679, neg_score: 0.1398, topic_score: 0.1336, keyword_count: 0 }
+
+[0.2058] << 402.00 : 403.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.1479] << 403.00 : 404.00 =>  Let me check the time.
+{ pos_score: 0.1192, neg_score: 0.1142, topic_score: 0.1429, keyword_count: 0 }
+
+[0.1734] << 404.00 : 405.00 =>  Ok, ok.
+{ pos_score: 0.1513, neg_score: 0.1768, topic_score: 0.1989, keyword_count: 0 }
+
+[0.3373] << 405.00 : 406.00 =>  131.
+{ pos_score: 0.3120, neg_score: 0.0761, topic_score: 0.1014, keyword_count: 0 }
+
+[0.2058] << 406.00 : 407.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.5204] << 407.00 : 408.00 =>  Describe the value.
+{ pos_score: 0.3158, neg_score: 0.0364, topic_score: 0.2410, keyword_count: 0 }
+
+[0.2058] << 408.00 : 409.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.2058] << 409.00 : 410.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.2058] << 410.00 : 411.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.2058] << 411.00 : 412.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.3030] << 412.00 : 417.00 =>  Describe the differences between two algorithms, which is better.
+{ pos_score: 0.2678, neg_score: 0.2527, topic_score: 0.2879, keyword_count: 0 }
+
+[0.2197] << 417.00 : 418.00 =>  The second one.
+{ pos_score: 0.1289, neg_score: 0.0500, topic_score: 0.1408, keyword_count: 0 }
+
+[0.2866] << 418.00 : 423.00 =>  The second one is better because it needs less memory.
+{ pos_score: 0.1661, neg_score: 0.0283, topic_score: 0.1488, keyword_count: 0 }
+
+[0.0085] << 423.00 : 426.00 =>  Are you sure?
+{ pos_score: 0.1056, neg_score: 0.1919, topic_score: 0.0947, keyword_count: 0 }
+
+[-0.0355] << 426.00 : 428.00 =>  Not actually.
+{ pos_score: 0.0885, neg_score: 0.1595, topic_score: 0.0356, keyword_count: 0 }
+
+[0.2146] << 428.00 : 432.00 =>  The space complexity of the both are N.
+{ pos_score: 0.1109, neg_score: 0.0768, topic_score: 0.1805, keyword_count: 0 }
+
+[0.0134] << 432.00 : 433.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[-0.0038] << 433.00 : 434.00 =>  Yes.
+{ pos_score: 0.0624, neg_score: 0.1092, topic_score: 0.0430, keyword_count: 0 }
+
+[0.0202] << 434.00 : 435.00 =>  I...
+{ pos_score: 0.1197, neg_score: 0.2052, topic_score: 0.1057, keyword_count: 0 }
+
+[0.3885] << 435.00 : 438.00 =>  One is 2N and the second one is N.
+{ pos_score: 0.2136, neg_score: 0.0838, topic_score: 0.2587, keyword_count: 0 }
+
+[-0.0191] << 438.00 : 440.00 =>  So the big connotation is both N.
+{ pos_score: 0.0971, neg_score: 0.1476, topic_score: 0.0314, keyword_count: 0 }
+
+[0.0256] << 440.00 : 442.00 =>  Yes, technically yes.
+{ pos_score: 0.0843, neg_score: 0.1115, topic_score: 0.0528, keyword_count: 0 }
+
+[0.2058] << 442.00 : 443.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.2058] << 443.00 : 444.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.2058] << 444.00 : 445.00 =>  Ok.
+{ pos_score: 0.1696, neg_score: 0.1782, topic_score: 0.2144, keyword_count: 0 }
+
+[0.1005] << 445.00 : 447.00 =>  Sorry, I studied now.
+{ pos_score: 0.2431, neg_score: 0.2163, topic_score: 0.0737, keyword_count: 0 }
+
+[0.5190] << 447.00 : 455.00 =>  Each time step involves some number of comparisons, enter that number in column hash C.
+{ pos_score: 0.2889, neg_score: 0.1533, topic_score: 0.3333, keyword_count: 1 }
+
+[0.2502] << 455.00 : 458.00 =>  What is the column hash C?
+{ pos_score: 0.1655, neg_score: 0.0715, topic_score: 0.1562, keyword_count: 0 }
+
+[0.0195] << 458.00 : 459.00 =>  It's here.
+{ pos_score: 0.0848, neg_score: 0.0909, topic_score: 0.0256, keyword_count: 0 }
+
+[0.4601] << 459.00 : 460.00 =>  Number of comparisons.
+{ pos_score: 0.2964, neg_score: 0.1798, topic_score: 0.2935, keyword_count: 1 }
+
+[0.0977] << 460.00 : 461.00 =>  Ah, ok.
+{ pos_score: 0.1305, neg_score: 0.1676, topic_score: 0.1348, keyword_count: 0 }
+
+[0.4458] << 461.00 : 462.00 =>  So we need to count the number.
+{ pos_score: 0.2962, neg_score: 0.0997, topic_score: 0.1993, keyword_count: 1 }
+
+[0.4740] << 462.00 : 463.00 =>  First one is 0.
+{ pos_score: 0.2558, neg_score: 0.0573, topic_score: 0.2756, keyword_count: 0 }
+
+[0.4598] << 463.00 : 464.00 =>  Second one is 1.
+{ pos_score: 0.2644, neg_score: 0.0648, topic_score: 0.2602, keyword_count: 0 }
+
+[0.0415] << 464.00 : 465.00 =>  We have 2.
+{ pos_score: 0.0930, neg_score: 0.1165, topic_score: 0.0650, keyword_count: 0 }
+
+[0.2772] << 465.00 : 466.00 =>  1.
+{ pos_score: 0.1680, neg_score: 0.1052, topic_score: 0.2144, keyword_count: 0 }
+
+[0.2607] << 466.00 : 467.00 =>  3.
+{ pos_score: 0.2585, neg_score: 0.1100, topic_score: 0.1122, keyword_count: 0 }
+
+[0.0134] << 467.00 : 468.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.2502] << 468.00 : 469.00 =>  It goes from the left, yeah?
+{ pos_score: 0.1855, neg_score: 0.1253, topic_score: 0.1899, keyword_count: 0 }
+
+[-0.0401] << 469.00 : 470.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.2760] << 470.00 : 471.00 =>  From the left.
+{ pos_score: 0.1392, neg_score: 0.1077, topic_score: 0.2446, keyword_count: 0 }
+
+[-0.0525] << 471.00 : 472.00 =>  Or could be from the right.
+{ pos_score: 0.0473, neg_score: 0.1596, topic_score: 0.0599, keyword_count: 0 }
+
+[-0.0859] << 472.00 : 473.00 =>  Sure?
+{ pos_score: 0.1126, neg_score: 0.2503, topic_score: 0.0517, keyword_count: 0 }
+
+[0.5708] << 473.00 : 474.00 =>  From the right number 0 and then 1.
+{ pos_score: 0.3164, neg_score: 0.0505, topic_score: 0.2549, keyword_count: 1 }
+
+[0.2257] << 474.00 : 476.00 =>  We don't know actually which way it goes.
+{ pos_score: 0.2215, neg_score: 0.1544, topic_score: 0.1586, keyword_count: 0 }
+
+[-0.0791] << 476.00 : 477.00 =>  I think it does.
+{ pos_score: 0.0286, neg_score: 0.0542, topic_score: -0.0535, keyword_count: 0 }
+
+[0.3153] << 477.00 : 478.00 =>  The problem is.
+{ pos_score: 0.2151, neg_score: 0.1446, topic_score: 0.2448, keyword_count: 0 }
+
+[-0.0401] << 478.00 : 479.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.0145] << 479.00 : 480.00 =>  It's probably not.
+{ pos_score: 0.0557, neg_score: 0.1084, topic_score: 0.0671, keyword_count: 0 }
+
+[0.0145] << 480.00 : 481.00 =>  It's probably not.
+{ pos_score: 0.0557, neg_score: 0.1084, topic_score: 0.0671, keyword_count: 0 }
+
+[0.0134] << 481.00 : 482.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.0134] << 482.00 : 483.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.0134] << 483.00 : 484.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.0134] << 484.00 : 485.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.0134] << 485.00 : 486.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.0134] << 486.00 : 487.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.0134] << 487.00 : 488.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.0134] << 488.00 : 489.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[-0.0791] << 489.00 : 490.00 =>  I think it does.
+{ pos_score: 0.0286, neg_score: 0.0542, topic_score: -0.0535, keyword_count: 0 }
+
+[0.1783] << 490.00 : 491.00 =>  It's probably left.
+{ pos_score: 0.0839, neg_score: 0.0431, topic_score: 0.1375, keyword_count: 0 }
+
+[0.1783] << 491.00 : 492.00 =>  It's probably left.
+{ pos_score: 0.0839, neg_score: 0.0431, topic_score: 0.1375, keyword_count: 0 }
+
+[0.2760] << 492.00 : 493.00 =>  From the left.
+{ pos_score: 0.1392, neg_score: 0.1077, topic_score: 0.2446, keyword_count: 0 }
+
+[0.2314] << 493.00 : 495.00 =>  Yeah, I think it goes from the right.
+{ pos_score: 0.1689, neg_score: 0.1447, topic_score: 0.2073, keyword_count: 0 }
+
+[0.0386] << 495.00 : 498.00 =>  Yeah, but it wasn't specified yet.
+{ pos_score: 0.0911, neg_score: 0.0979, topic_score: 0.0454, keyword_count: 0 }
+
+[0.2552] << 498.00 : 501.00 =>  Yeah, I guess it goes from the right.
+{ pos_score: 0.1709, neg_score: 0.1433, topic_score: 0.2276, keyword_count: 0 }
+
+[0.5745] << 501.00 : 505.00 =>  Because you put it at the end and then you shift it left.
+{ pos_score: 0.3140, neg_score: 0.0237, topic_score: 0.2341, keyword_count: 1 }
+
+[-0.0401] << 505.00 : 506.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.5020] << 506.00 : 509.00 =>  But you could place it at the beginning and shift right, no?
+{ pos_score: 0.2607, neg_score: 0.0997, topic_score: 0.2910, keyword_count: 1 }
+
+[-0.0038] << 509.00 : 510.00 =>  Yes.
+{ pos_score: 0.0624, neg_score: 0.1092, topic_score: 0.0430, keyword_count: 0 }
+
+[0.1896] << 510.00 : 513.00 =>  But it will be more resource.
+{ pos_score: 0.2193, neg_score: 0.1167, topic_score: 0.0870, keyword_count: 0 }
+
+[0.0695] << 513.00 : 515.00 =>  I think it's more like...
+{ pos_score: 0.1603, neg_score: 0.1312, topic_score: 0.0403, keyword_count: 0 }
+
+[0.0605] << 515.00 : 516.00 =>  I think it's from the right.
+{ pos_score: 0.0862, neg_score: 0.1004, topic_score: 0.0747, keyword_count: 0 }
+
+[-0.0401] << 516.00 : 517.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.1919] << 517.00 : 518.00 =>  Makes more sense.
+{ pos_score: 0.1738, neg_score: 0.1298, topic_score: 0.1479, keyword_count: 0 }
+
+[0.6859] << 518.00 : 522.00 =>  Because if you want to put it at the beginning then you need to shift all of this right.
+{ pos_score: 0.3784, neg_score: 0.0976, topic_score: 0.3552, keyword_count: 1 }
+
+[-0.0168] << 522.00 : 523.00 =>  Yes, yes.
+{ pos_score: 0.0791, neg_score: 0.1303, topic_score: 0.0344, keyword_count: 0 }
+
+[0.2927] << 523.00 : 524.00 =>  And then back left.
+{ pos_score: 0.1562, neg_score: 0.0371, topic_score: 0.1736, keyword_count: 0 }
+
+[0.2694] << 524.00 : 525.00 =>  It's like cards.
+{ pos_score: 0.2497, neg_score: 0.1011, topic_score: 0.1207, keyword_count: 0 }
+
+[0.1779] << 525.00 : 528.00 =>  What do you mean like cards?
+{ pos_score: 0.2193, neg_score: 0.1027, topic_score: 0.0613, keyword_count: 0 }
+
+[0.5119] << 528.00 : 538.00 =>  And you have a kind of cards and you have like on the left unsorted ones, I mean sorted ones and on the right unsorted so you go from the right to the left.
+{ pos_score: 0.3352, neg_score: 0.2393, topic_score: 0.3660, keyword_count: 1 }
+
+[-0.0038] << 538.00 : 539.00 =>  Yes.
+{ pos_score: 0.0624, neg_score: 0.1092, topic_score: 0.0430, keyword_count: 0 }
+
+[0.4018] << 539.00 : 541.00 =>  So it goes from the right to the left.
+{ pos_score: 0.2381, neg_score: 0.0974, topic_score: 0.2611, keyword_count: 0 }
+
+[0.1924] << 541.00 : 542.00 =>  Okay.
+{ pos_score: 0.1536, neg_score: 0.1634, topic_score: 0.2022, keyword_count: 0 }
+
+[0.1924] << 542.00 : 543.00 =>  Okay.
+{ pos_score: 0.1536, neg_score: 0.1634, topic_score: 0.2022, keyword_count: 0 }
+
+[0.1852] << 543.00 : 545.00 =>  Okay, so this will be also one.
+{ pos_score: 0.2155, neg_score: 0.1947, topic_score: 0.1644, keyword_count: 0 }
+
+[0.1103] << 545.00 : 546.00 =>  One, yeah.
+{ pos_score: 0.1183, neg_score: 0.0616, topic_score: 0.0536, keyword_count: 0 }
+
+[0.1612] << 546.00 : 548.00 =>  And it will be three.
+{ pos_score: 0.1083, neg_score: 0.0640, topic_score: 0.1168, keyword_count: 0 }
+
+[-0.0401] << 548.00 : 549.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.3233] << 549.00 : 550.00 =>  And four.
+{ pos_score: 0.2365, neg_score: 0.0515, topic_score: 0.1383, keyword_count: 0 }
+
+[0.2041] << 550.00 : 551.00 =>  One.
+{ pos_score: 0.1350, neg_score: 0.0355, topic_score: 0.1046, keyword_count: 0 }
+
+[0.2334] << 551.00 : 552.00 =>  Three.
+{ pos_score: 0.2300, neg_score: 0.0775, topic_score: 0.0808, keyword_count: 0 }
+
+[0.2766] << 552.00 : 553.00 =>  Four.
+{ pos_score: 0.2150, neg_score: 0.0554, topic_score: 0.1170, keyword_count: 0 }
+
+[0.2041] << 553.00 : 554.00 =>  One.
+{ pos_score: 0.1350, neg_score: 0.0355, topic_score: 0.1046, keyword_count: 0 }
+
+[0.2334] << 554.00 : 555.00 =>  Three.
+{ pos_score: 0.2300, neg_score: 0.0775, topic_score: 0.0808, keyword_count: 0 }
+
+[0.2766] << 555.00 : 556.00 =>  Four.
+{ pos_score: 0.2150, neg_score: 0.0554, topic_score: 0.1170, keyword_count: 0 }
+
+[0.2766] << 556.00 : 557.00 =>  Four.
+{ pos_score: 0.2150, neg_score: 0.0554, topic_score: 0.1170, keyword_count: 0 }
+
+[0.0618] << 557.00 : 558.00 =>  Here?
+{ pos_score: 0.1127, neg_score: 0.1775, topic_score: 0.1265, keyword_count: 0 }
+
+[-0.0038] << 558.00 : 559.00 =>  Yes.
+{ pos_score: 0.0624, neg_score: 0.1092, topic_score: 0.0430, keyword_count: 0 }
+
+[0.2478] << 559.00 : 560.00 =>  Oh, four.
+{ pos_score: 0.1971, neg_score: 0.0601, topic_score: 0.1108, keyword_count: 0 }
+
+[0.4352] << 560.00 : 561.00 =>  One, two, four.
+{ pos_score: 0.2779, neg_score: 0.0526, topic_score: 0.2099, keyword_count: 0 }
+
+[0.1446] << 561.00 : 562.00 =>  Yeah, four.
+{ pos_score: 0.1274, neg_score: 0.0436, topic_score: 0.0608, keyword_count: 0 }
+
+[-0.0401] << 562.00 : 563.00 =>  Yeah.
+{ pos_score: 0.0644, neg_score: 0.1171, topic_score: 0.0126, keyword_count: 0 }
+
+[0.1279] << 563.00 : 564.00 =>  Then we'll have...
+{ pos_score: 0.1672, neg_score: 0.1456, topic_score: 0.1062, keyword_count: 0 }
+
+[0.2935] << 564.00 : 565.00 =>  Six.
+{ pos_score: 0.2166, neg_score: 0.0718, topic_score: 0.1487, keyword_count: 0 }
+
+[0.0134] << 565.00 : 566.00 =>  No.
+{ pos_score: 0.0693, neg_score: 0.1270, topic_score: 0.0711, keyword_count: 0 }
+
+[0.2519] << 566.00 : 567.00 =>  Can you please do not do this?
+{ pos_score: 0.2130, neg_score: 0.1408, topic_score: 0.1797, keyword_count: 0 }
+
+[0.5215] << 567.00 : 581.00 =>  One, two, three, four, five, five, five, five, five, five, six, six, six.
+{ pos_score: 0.3046, neg_score: 0.0557, topic_score: 0.2725, keyword_count: 0 }
+
+[0.2187] << 581.00 : 582.00 =>  Okay, so let's go with six.
+{ pos_score: 0.1811, neg_score: 0.0542, topic_score: 0.0919, keyword_count: 0 }
+
+[0.1846] << 582.00 : 583.00 =>  We're doing tests, so that's...
+{ pos_score: 0.2548, neg_score: 0.2148, topic_score: 0.1446, keyword_count: 0 }
+
+[0.0647] << 583.00 : 584.00 =>  Kuba, what is the time?
+{ pos_score: 0.0957, neg_score: 0.1092, topic_score: 0.0782, keyword_count: 0 }
+
+[0.3360] << 584.00 : 585.00 =>  13, 34.
+{ pos_score: 0.2940, neg_score: 0.1217, topic_score: 0.1636, keyword_count: 0 }
+
+[0.1924] << 585.00 : 586.00 =>  Okay.
+{ pos_score: 0.1536, neg_score: 0.1634, topic_score: 0.2022, keyword_count: 0 }
+
+[0.1924] << 586.00 : 587.00 =>  Okay.
+{ pos_score: 0.1536, neg_score: 0.1634, topic_score: 0.2022, keyword_count: 0 }
+
+[0.2335] << 587.00 : 588.00 =>  So let's go with six.
+{ pos_score: 0.1824, neg_score: 0.0582, topic_score: 0.1093, keyword_count: 0 }
+
+[0.1846] << 588.00 : 590.00 =>  We're doing tests, so that's...
+{ pos_score: 0.2548, neg_score: 0.2148, topic_score: 0.1446, keyword_count: 0 }
+
+[0.0647] << 590.00 : 591.00 =>  Kuba, what is the time?
+{ pos_score: 0.0957, neg_score: 0.1092, topic_score: 0.0782, keyword_count: 0 }
+
+[0.3360] << 591.00 : 592.00 =>  13, 34.
+{ pos_score: 0.2940, neg_score: 0.1217, topic_score: 0.1636, keyword_count: 0 }
+
+[0.1924] << 592.00 : 593.00 =>  Okay.
+{ pos_score: 0.1536, neg_score: 0.1634, topic_score: 0.2022, keyword_count: 0 }
+
+[0.1924] << 593.00 : 594.00 =>  Okay.
+{ pos_score: 0.1536, neg_score: 0.1634, topic_score: 0.2022, keyword_count: 0 }
+
+[-0.0099] << 594.00 : 596.00 =>  Not here.
+{ pos_score: 0.1105, neg_score: 0.1793, topic_score: 0.0589, keyword_count: 0 }
+
+[0.0930] << 596.00 : 597.00 =>  I have an idea.
+{ pos_score: 0.1940, neg_score: 0.2041, topic_score: 0.1031, keyword_count: 0 }
+
+[0.0930] << 597.00 : 598.00 =>  I have an idea.
+{ pos_score: 0.1940, neg_score: 0.2041, topic_score: 0.1031, keyword_count: 0 }
+
+[0.0930] << 598.00 : 600.00 =>  I have an idea.
+{ pos_score: 0.1940, neg_score: 0.2041, topic_score: 0.1031, keyword_count: 0 }
+
+[-0.0706] << 604.00 : 605.00 =>  Nooo.
+{ pos_score: 0.0701, neg_score: 0.1812, topic_score: 0.0405, keyword_count: 0 }
+
+[-0.0706] << 605.00 : 606.00 =>  Nooo.
+{ pos_score: 0.0701, neg_score: 0.1812, topic_score: 0.0405, keyword_count: 0 }
+
+[-0.0706] << 606.00 : 607.00 =>  Nooo.
+{ pos_score: 0.0701, neg_score: 0.1812, topic_score: 0.0405, keyword_count: 0 }
+
+[-0.0706] << 607.00 : 608.00 =>  Nooo.
+{ pos_score: 0.0701, neg_score: 0.1812, topic_score: 0.0405, keyword_count: 0 }
+
+[-0.0706] << 608.00 : 609.00 =>  Nooo.
+{ pos_score: 0.0701, neg_score: 0.1812, topic_score: 0.0405, keyword_count: 0 }
+
+[-0.0706] << 609.00 : 610.00 =>  Nooo.
+{ pos_score: 0.0701, neg_score: 0.1812, topic_score: 0.0405, keyword_count: 0 }
+
+[0.1364] << 610.00 : 612.00 =>  Over the time to...
+{ pos_score: 0.1345, neg_score: 0.0981, topic_score: 0.1000, keyword_count: 0 }
+
+[0.0794] << 617.00 : 618.00 =>  It's noise.
+{ pos_score: 0.2588, neg_score: 0.1795, topic_score: 0.0001, keyword_count: 0 }
+
+[0.0952] << 618.00 : 619.00 =>  It's background noise.
+{ pos_score: 0.2485, neg_score: 0.1575, topic_score: 0.0042, keyword_count: 0 }
+
+[-0.0706] << 619.00 : 621.00 =>  Nooo.
+{ pos_score: 0.0701, neg_score: 0.1812, topic_score: 0.0405, keyword_count: 0 }
+
+[0.1052] << 621.00 : 622.00 =>  We'll have to wait for you to change it.
+{ pos_score: 0.1264, neg_score: 0.1237, topic_score: 0.1025, keyword_count: 0 }
+
+[0.1052] << 622.00 : 623.00 =>  We'll have to wait for you to change it.
+{ pos_score: 0.1264, neg_score: 0.1237, topic_score: 0.1025, keyword_count: 0 }
+
+[-0.0706] << 623.00 : 624.00 =>  Nooo.
+{ pos_score: 0.0701, neg_score: 0.1812, topic_score: 0.0405, keyword_count: 0 }
+
+[0.3960] << 624.00 : 625.00 =>  Over the time to compare it's count.
+{ pos_score: 0.2428, neg_score: 0.0989, topic_score: 0.2021, keyword_count: 1 }
+
+[0.1140] << 625.00 : 628.00 =>  Dumb for you to change it, decrease or stay the same?
+{ pos_score: 0.1525, neg_score: 0.1550, topic_score: 0.1166, keyword_count: 0 }
+
+[0.0932] << 628.00 : 629.00 =>  Hmm?
+{ pos_score: 0.1425, neg_score: 0.2145, topic_score: 0.1653, keyword_count: 0 }
+
+[0.1140] << 629.00 : 630.00 =>  Dumb for you to change it, decrease or stay the same?
+{ pos_score: 0.1525, neg_score: 0.1550, topic_score: 0.1166, keyword_count: 0 }
+
+[0.0932] << 630.00 : 631.00 =>  Hmm?
+{ pos_score: 0.1425, neg_score: 0.2145, topic_score: 0.1653, keyword_count: 0 }
+
+[0.1140] << 631.00 : 634.00 =>  Dumb for you to change it, decrease or stay the same?
+{ pos_score: 0.1525, neg_score: 0.1550, topic_score: 0.1166, keyword_count: 0 }
+
+[0.0544] << 634.00 : 637.00 =>  Ehhhhhhhhhhhhh...
+{ pos_score: 0.1036, neg_score: 0.1161, topic_score: 0.0670, keyword_count: 0 }
+
+[0.2615] << 637.00 : 638.00 =>  Increase.
+{ pos_score: 0.1607, neg_score: 0.1050, topic_score: 0.2058, keyword_count: 0 }
+
+[0.1579] << 638.00 : 641.00 =>  You have to explain an answer in complete sentence.
+{ pos_score: 0.2630, neg_score: 0.2214, topic_score: 0.1164, keyword_count: 0 }
+
+[0.1796] << 641.00 : 643.00 =>  It increases.
+{ pos_score: 0.1850, neg_score: 0.0843, topic_score: 0.0789, keyword_count: 0 }
+
+[0.0787] << 643.00 : 650.00 =>  because it does not bad
+{ pos_score: 0.1462, neg_score: 0.0586, topic_score: -0.0088, keyword_count: 0 }
+
+[0.2054] << 650.00 : 658.00 =>  I mean it's because you have the amount of
+{ pos_score: 0.1649, neg_score: 0.0018, topic_score: 0.0423, keyword_count: 0 }
+
+[0.7322] << 658.00 : 663.00 =>  with bigger elements, larger number of elements
+{ pos_score: 0.3462, neg_score: 0.0885, topic_score: 0.3746, keyword_count: 2 }
+
+[0.8426] << 663.00 : 673.00 =>  number of elements to find correct place
+{ pos_score: 0.3592, neg_score: 0.1342, topic_score: 0.5177, keyword_count: 2 }
+
+[0.5777] << 681.00 : 682.00 =>  code
+{ pos_score: 0.2565, neg_score: 0.1012, topic_score: 0.4225, keyword_count: 0 }
+
+[0.2333] << 682.00 : 685.00 =>  no no no not code
+{ pos_score: 0.2255, neg_score: 0.2281, topic_score: 0.2359, keyword_count: 0 }
+
+[0.7544] << 685.00 : 688.00 =>  insertion sword pseudo code
+{ pos_score: 0.4171, neg_score: 0.0591, topic_score: 0.3463, keyword_count: 1 }
+
+[0.2545] << 708.00 : 710.00 =>  ea of j
+{ pos_score: 0.1675, neg_score: 0.1050, topic_score: 0.1919, keyword_count: 0 }
+
+[0.1967] << 710.00 : 711.00 =>  j
+{ pos_score: 0.1665, neg_score: 0.1200, topic_score: 0.1502, keyword_count: 0 }
+
+[0.1967] << 713.00 : 714.00 =>  j
+{ pos_score: 0.1665, neg_score: 0.1200, topic_score: 0.1502, keyword_count: 0 }
+
+[0.3414] << 716.00 : 717.00 =>  key
+{ pos_score: 0.1376, neg_score: 0.0166, topic_score: 0.1703, keyword_count: 1 }
+
+[-0.0458] << 718.00 : 719.00 =>  yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.3414] << 719.00 : 720.00 =>  key
+{ pos_score: 0.1376, neg_score: 0.0166, topic_score: 0.1703, keyword_count: 1 }
+
+[0.1430] << 720.00 : 721.00 =>  what?
+{ pos_score: 0.1628, neg_score: 0.1699, topic_score: 0.1502, keyword_count: 0 }
+
+[0.1161] << 721.00 : 723.00 =>  you thinking about the first one? I don't know
+{ pos_score: 0.1248, neg_score: 0.1283, topic_score: 0.1196, keyword_count: 0 }
+
+[0.0988] << 734.00 : 736.00 =>  this is j from
+{ pos_score: 0.0989, neg_score: 0.1523, topic_score: 0.1522, keyword_count: 0 }
+
+[0.2399] << 736.00 : 738.00 =>  j is one
+{ pos_score: 0.1788, neg_score: 0.1074, topic_score: 0.1685, keyword_count: 0 }
+
+[0.3726] << 738.00 : 741.00 =>  do we go from one or from zero here?
+{ pos_score: 0.2583, neg_score: 0.0960, topic_score: 0.2103, keyword_count: 0 }
+
+[1.0789] << 741.00 : 742.00 =>  the array?
+{ pos_score: 0.5947, neg_score: 0.1083, topic_score: 0.5425, keyword_count: 1 }
+
+[-0.0458] << 742.00 : 743.00 =>  yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.3428] << 743.00 : 745.00 =>  it goes from zero
+{ pos_score: 0.2085, neg_score: 0.0429, topic_score: 0.1772, keyword_count: 0 }
+
+[0.2451] << 745.00 : 749.00 =>  but here we have one to n-one
+{ pos_score: 0.1639, neg_score: 0.1037, topic_score: 0.1848, keyword_count: 0 }
+
+[0.5103] << 749.00 : 751.00 =>  so from key would be second value
+{ pos_score: 0.2679, neg_score: 0.0594, topic_score: 0.2519, keyword_count: 1 }
+
+[0.4519] << 751.00 : 755.00 =>  ah because j is minus one so it goes from zero
+{ pos_score: 0.2507, neg_score: 0.0235, topic_score: 0.2248, keyword_count: 0 }
+
+[0.7801] << 755.00 : 761.00 =>  the array starts at zero because j is like one and i zero so it is a of zero
+{ pos_score: 0.4101, neg_score: 0.0747, topic_score: 0.3947, keyword_count: 1 }
+
+[0.1078] << 761.00 : 762.00 =>  could be
+{ pos_score: 0.1095, neg_score: 0.1298, topic_score: 0.1281, keyword_count: 0 }
+
+[0.0931] << 762.00 : 763.00 =>  i
+{ pos_score: 0.0945, neg_score: 0.1525, topic_score: 0.1511, keyword_count: 0 }
+
+[0.1890] << 763.00 : 764.00 =>  okay
+{ pos_score: 0.1465, neg_score: 0.1665, topic_score: 0.2090, keyword_count: 0 }
+
+[-0.0672] << 764.00 : 765.00 =>  well i
+{ pos_score: 0.0532, neg_score: 0.1444, topic_score: 0.0240, keyword_count: 0 }
+
+[0.3997] << 765.00 : 768.00 =>  greater equal to zero
+{ pos_score: 0.2081, neg_score: 0.0748, topic_score: 0.2664, keyword_count: 0 }
+
+[0.3630] << 768.00 : 771.00 =>  and a of j
+{ pos_score: 0.2089, neg_score: 0.0793, topic_score: 0.2334, keyword_count: 0 }
+
+[0.2663] << 771.00 : 773.00 =>  a of i is
+{ pos_score: 0.1414, neg_score: 0.0722, topic_score: 0.1971, keyword_count: 0 }
+
+[0.4740] << 773.00 : 775.00 =>  greater than key
+{ pos_score: 0.2222, neg_score: 0.0550, topic_score: 0.2567, keyword_count: 1 }
+
+[0.3193] << 775.00 : 776.00 =>  then
+{ pos_score: 0.1817, neg_score: 0.0696, topic_score: 0.2072, keyword_count: 0 }
+
+[0.2329] << 776.00 : 778.00 =>  i plus one
+{ pos_score: 0.2431, neg_score: 0.1089, topic_score: 0.0987, keyword_count: 0 }
+
+[0.3019] << 778.00 : 782.00 =>  okay so we shift
+{ pos_score: 0.1424, neg_score: 0.1449, topic_score: 0.2544, keyword_count: 1 }
+
+[0.3019] << 782.00 : 784.00 =>  okay so we shift
+{ pos_score: 0.1424, neg_score: 0.1449, topic_score: 0.2544, keyword_count: 1 }
+
+[0.0321] << 792.00 : 793.00 =>  oh god
+{ pos_score: 0.0903, neg_score: 0.0712, topic_score: 0.0130, keyword_count: 0 }
+
+[0.0137] << 793.00 : 797.00 =>  no we have to make a painting
+{ pos_score: 0.1048, neg_score: 0.0785, topic_score: -0.0127, keyword_count: 0 }
+
+[-0.0458] << 797.00 : 799.00 =>  yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.1454] << 799.00 : 803.00 =>  okay so
+{ pos_score: 0.1296, neg_score: 0.1353, topic_score: 0.1512, keyword_count: 0 }
+
+[0.2399] << 803.00 : 806.00 =>  j is one
+{ pos_score: 0.1788, neg_score: 0.1074, topic_score: 0.1685, keyword_count: 0 }
+
+[0.1967] << 806.00 : 807.00 =>  j
+{ pos_score: 0.1665, neg_score: 0.1200, topic_score: 0.1502, keyword_count: 0 }
+
+[0.1541] << 807.00 : 808.00 =>  i is one
+{ pos_score: 0.1009, neg_score: 0.0599, topic_score: 0.1131, keyword_count: 0 }
+
+[-0.0458] << 808.00 : 809.00 =>  yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.1967] << 809.00 : 810.00 =>  j
+{ pos_score: 0.1665, neg_score: 0.1200, topic_score: 0.1502, keyword_count: 0 }
+
+[0.2337] << 810.00 : 811.00 =>  i is zero
+{ pos_score: 0.1743, neg_score: 0.1148, topic_score: 0.1741, keyword_count: 0 }
+
+[0.2337] << 811.00 : 812.00 =>  i is zero
+{ pos_score: 0.1743, neg_score: 0.1148, topic_score: 0.1741, keyword_count: 0 }
+
+[0.1890] << 812.00 : 813.00 =>  okay
+{ pos_score: 0.1465, neg_score: 0.1665, topic_score: 0.2090, keyword_count: 0 }
+
+[0.3470] << 813.00 : 817.00 =>  i is greater equal to zero
+{ pos_score: 0.1792, neg_score: 0.0777, topic_score: 0.2455, keyword_count: 0 }
+
+[0.0659] << 817.00 : 818.00 =>  let's
+{ pos_score: 0.1825, neg_score: 0.2300, topic_score: 0.1134, keyword_count: 0 }
+
+[0.1380] << 818.00 : 819.00 =>  i is also here
+{ pos_score: 0.0909, neg_score: 0.0788, topic_score: 0.1259, keyword_count: 0 }
+
+[0.1890] << 819.00 : 820.00 =>  okay
+{ pos_score: 0.1465, neg_score: 0.1665, topic_score: 0.2090, keyword_count: 0 }
+
+[0.2304] << 820.00 : 821.00 =>  i is bigger
+{ pos_score: 0.1449, neg_score: 0.1089, topic_score: 0.1945, keyword_count: 0 }
+
+[0.1890] << 821.00 : 822.00 =>  okay
+{ pos_score: 0.1465, neg_score: 0.1665, topic_score: 0.2090, keyword_count: 0 }
+
+[0.0750] << 822.00 : 823.00 =>  and i
+{ pos_score: 0.1102, neg_score: 0.1295, topic_score: 0.0943, keyword_count: 0 }
+
+[0.0931] << 823.00 : 824.00 =>  i
+{ pos_score: 0.0945, neg_score: 0.1525, topic_score: 0.1511, keyword_count: 0 }
+
+[0.0931] << 824.00 : 825.00 =>  i
+{ pos_score: 0.0945, neg_score: 0.1525, topic_score: 0.1511, keyword_count: 0 }
+
+[0.3611] << 825.00 : 826.00 =>  okay so i is greater
+{ pos_score: 0.2224, neg_score: 0.1646, topic_score: 0.3033, keyword_count: 0 }
+
+[0.3555] << 826.00 : 827.00 =>  so it will be like this
+{ pos_score: 0.1860, neg_score: 0.0676, topic_score: 0.2370, keyword_count: 0 }
+
+[0.2329] << 827.00 : 828.00 =>  i plus one
+{ pos_score: 0.2431, neg_score: 0.1089, topic_score: 0.0987, keyword_count: 0 }
+
+[0.1186] << 828.00 : 829.00 =>  so it is this one
+{ pos_score: 0.0462, neg_score: 0.0539, topic_score: 0.1262, keyword_count: 0 }
+
+[0.2329] << 829.00 : 830.00 =>  i plus one
+{ pos_score: 0.2431, neg_score: 0.1089, topic_score: 0.0987, keyword_count: 0 }
+
+[0.1186] << 830.00 : 831.00 =>  so it is this one
+{ pos_score: 0.0462, neg_score: 0.0539, topic_score: 0.1262, keyword_count: 0 }
+
+[0.2329] << 831.00 : 832.00 =>  i plus one
+{ pos_score: 0.2431, neg_score: 0.1089, topic_score: 0.0987, keyword_count: 0 }
+
+[0.1186] << 832.00 : 833.00 =>  so it is this one
+{ pos_score: 0.0462, neg_score: 0.0539, topic_score: 0.1262, keyword_count: 0 }
+
+[0.0931] << 833.00 : 840.00 =>  I
+{ pos_score: 0.0945, neg_score: 0.1525, topic_score: 0.1511, keyword_count: 0 }
+
+[0.0022] << 840.00 : 841.00 =>  no i don't get it
+{ pos_score: 0.1040, neg_score: 0.1137, topic_score: 0.0119, keyword_count: 0 }
+
+[0.1453] << 841.00 : 843.00 =>  wait it is key
+{ pos_score: 0.0772, neg_score: 0.0975, topic_score: 0.1156, keyword_count: 1 }
+
+[0.2571] << 843.00 : 844.00 =>  it is key
+{ pos_score: 0.1427, neg_score: 0.0501, topic_score: 0.1145, keyword_count: 1 }
+
+[0.0826] << 844.00 : 845.00 =>  so
+{ pos_score: 0.0977, neg_score: 0.1196, topic_score: 0.1046, keyword_count: 0 }
+
+[0.0238] << 845.00 : 846.00 =>  it is
+{ pos_score: 0.0559, neg_score: 0.0706, topic_score: 0.0385, keyword_count: 0 }
+
+[0.1145] << 846.00 : 847.00 =>  there
+{ pos_score: 0.0773, neg_score: 0.0800, topic_score: 0.1172, keyword_count: 0 }
+
+[0.0826] << 847.00 : 848.00 =>  so
+{ pos_score: 0.0977, neg_score: 0.1196, topic_score: 0.1046, keyword_count: 0 }
+
+[0.0066] << 848.00 : 849.80 =>  yes
+{ pos_score: 0.0635, neg_score: 0.1118, topic_score: 0.0549, keyword_count: 0 }
+
+[0.0077] << 849.80 : 851.00 =>  so you
+{ pos_score: 0.1131, neg_score: 0.1649, topic_score: 0.0595, keyword_count: 0 }
+
+[0.2329] << 851.00 : 853.00 =>  I plus one
+{ pos_score: 0.2431, neg_score: 0.1089, topic_score: 0.0987, keyword_count: 0 }
+
+[0.1494] << 853.00 : 854.44 =>  it would be one
+{ pos_score: 0.1237, neg_score: 0.1023, topic_score: 0.1280, keyword_count: 0 }
+
+[-0.0020] << 855.00 : 856.00 =>  you
+{ pos_score: 0.1047, neg_score: 0.1752, topic_score: 0.0685, keyword_count: 0 }
+
+[0.6207] << 856.00 : 857.00 =>  put four
+{ pos_score: 0.3395, neg_score: 0.0694, topic_score: 0.3506, keyword_count: 0 }
+
+[0.0983] << 857.00 : 858.00 =>  here
+{ pos_score: 0.0904, neg_score: 0.1033, topic_score: 0.1113, keyword_count: 0 }
+
+[0.1610] << 858.00 : 859.00 =>  then you
+{ pos_score: 0.1495, neg_score: 0.1279, topic_score: 0.1394, keyword_count: 0 }
+
+[0.6164] << 859.00 : 860.00 =>  decrement
+{ pos_score: 0.4159, neg_score: 0.0606, topic_score: 0.2611, keyword_count: 0 }
+
+[0.0931] << 860.00 : 861.00 =>  I
+{ pos_score: 0.0945, neg_score: 0.1525, topic_score: 0.1511, keyword_count: 0 }
+
+[0.4584] << 861.00 : 868.74 =>  and then you I plus one and then the key okay so you put all okay yeah yeah
+{ pos_score: 0.2650, neg_score: 0.0790, topic_score: 0.2224, keyword_count: 1 }
+
+[0.3013] << 868.74 : 878.22 =>  decrease I I plus one is free so yeah okay and then it's I is slower than zero
+{ pos_score: 0.1717, neg_score: 0.1062, topic_score: 0.2358, keyword_count: 0 }
+
+[-0.0778] << 878.22 : 886.32 =>  so then we go out and then yeah okay oh okay
+{ pos_score: 0.1656, neg_score: 0.2849, topic_score: 0.0415, keyword_count: 0 }
+
+[0.8584] << 886.32 : 896.78 =>  what variable stores the next value to be inserted next value to be inserted key
+{ pos_score: 0.4561, neg_score: 0.0691, topic_score: 0.3214, keyword_count: 3 }
+
+[0.8784] << 896.78 : 911.54 =>  yeah yeah yes which line gets the next value to be inserted three this line
+{ pos_score: 0.5126, neg_score: 0.1335, topic_score: 0.3993, keyword_count: 2 }
+
+[0.9660] << 911.54 : 917.36 =>  inserts the value to the correct position 8 which lines if stored values by one
+{ pos_score: 0.4927, neg_score: 0.0856, topic_score: 0.4589, keyword_count: 2 }
+
+[0.5640] << 917.36 : 927.58 =>  position 6 yes and which line controls the execution of the while you pre test 5
+{ pos_score: 0.3281, neg_score: 0.1648, topic_score: 0.3507, keyword_count: 1 }
+
+[0.4898] << 927.58 : 939.48 =>  consider the performance of this algorithm how many time will the for loop run for
+{ pos_score: 0.2752, neg_score: 0.1091, topic_score: 0.3236, keyword_count: 0 }
+
+[0.4491] << 939.48 : 949.62 =>  loop it will run and times right oh this for look yeah and times and or and minus
+{ pos_score: 0.2474, neg_score: 0.0235, topic_score: 0.2252, keyword_count: 0 }
+
+[0.4346] << 949.62 : 958.14 =>  and minus one I mean yeah and minus one because you start from one for some body
+{ pos_score: 0.3170, neg_score: 0.0060, topic_score: 0.1235, keyword_count: 0 }
+
+[0.3305] << 958.14 : 963.66 =>  of J what is the most times the body of the while loop could run
+{ pos_score: 0.1868, neg_score: 0.0950, topic_score: 0.2387, keyword_count: 0 }
+
+[0.4531] << 963.66 : 984.20 =>  so J no I J minus one so no it's J is a J because if you have if for example the J is
+{ pos_score: 0.2807, neg_score: 0.0932, topic_score: 0.2656, keyword_count: 0 }
+
+[0.5144] << 984.20 : 990.94 =>  when I is one and the while loop one is one and zero so it will be two cases
+{ pos_score: 0.2479, neg_score: 0.0857, topic_score: 0.3523, keyword_count: 0 }
+
+[0.2269] << 990.94 : 993.02 =>  but is it a J times
+{ pos_score: 0.1663, neg_score: 0.0575, topic_score: 0.1181, keyword_count: 0 }
+
+[0.0611] << 993.02 : 994.70 =>  uh
+{ pos_score: 0.0917, neg_score: 0.0865, topic_score: 0.0558, keyword_count: 0 }
+
+[0.5061] << 994.70 : 1003.20 =>  no I just say do we take from one iteration of a for loop or yes because for some value of J
+{ pos_score: 0.2781, neg_score: 0.0810, topic_score: 0.2590, keyword_count: 1 }
+
+[0.4599] << 1003.20 : 1010.20 =>  of a for loop? yes because for some value of j. for certain j times
+{ pos_score: 0.2637, neg_score: 0.0499, topic_score: 0.2461, keyword_count: 0 }
+
+[0.3538] << 1010.20 : 1019.20 =>  for some value of j what is the fewest times the body of the while loop could run?
+{ pos_score: 0.1735, neg_score: 0.0822, topic_score: 0.2626, keyword_count: 0 }
+
+[0.3984] << 1019.20 : 1032.20 =>  one? for some value of j what is the fewest time the pretest of the while loop could run?
+{ pos_score: 0.2187, neg_score: 0.0922, topic_score: 0.2719, keyword_count: 0 }
+
+[0.1894] << 1032.20 : 1039.20 =>  so j plus one
+{ pos_score: 0.1835, neg_score: 0.1155, topic_score: 0.1214, keyword_count: 0 }
+
+[0.2219] << 1039.20 : 1047.20 =>  yes because you have to add one which it fails
+{ pos_score: 0.1843, neg_score: 0.0356, topic_score: 0.0731, keyword_count: 0 }
+
+[0.0066] << 1047.20 : 1049.20 =>  yes
+{ pos_score: 0.0635, neg_score: 0.1118, topic_score: 0.0549, keyword_count: 0 }
+
+[0.1692] << 1049.20 : 1054.20 =>  or should it be two
+{ pos_score: 0.1403, neg_score: 0.0654, topic_score: 0.0943, keyword_count: 0 }
+
+[0.1890] << 1054.20 : 1058.20 =>  okay
+{ pos_score: 0.1465, neg_score: 0.1665, topic_score: 0.2090, keyword_count: 0 }
+
+[0.0797] << 1058.20 : 1061.20 =>  i guess we have enough recording currently for now
+{ pos_score: 0.1623, neg_score: 0.0689, topic_score: -0.0137, keyword_count: 0 }
+
+[0.0403] << 1061.20 : 1062.20 =>  yeah okay
+{ pos_score: 0.1164, neg_score: 0.1876, topic_score: 0.1115, keyword_count: 0 }
+
+[-0.0272] << 1062.20 : 1067.20 =>  i mean you can go up to 20 minutes because it's like three minutes more
+{ pos_score: 0.0924, neg_score: 0.1129, topic_score: -0.0067, keyword_count: 0 }
+
+[0.1249] << 1067.20 : 1074.20 =>  okay i mean it doesn't really matter but i guess
+{ pos_score: 0.1359, neg_score: 0.0958, topic_score: 0.0848, keyword_count: 0 }
+
+[0.3592] << 1074.20 : 1077.20 =>  it might be a nice round number
+{ pos_score: 0.3600, neg_score: 0.1362, topic_score: 0.0854, keyword_count: 1 }
+
+[0.3813] << 1077.20 : 1084.20 =>  okay so each label statement below as true or false
+{ pos_score: 0.2313, neg_score: 0.0999, topic_score: 0.2499, keyword_count: 0 }
+
+[0.7219] << 1084.20 : 1087.20 =>  the array length must be of a power too
+{ pos_score: 0.3477, neg_score: 0.0217, topic_score: 0.3458, keyword_count: 1 }
+
+[0.2438] << 1087.20 : 1088.20 =>  false
+{ pos_score: 0.1257, neg_score: 0.0910, topic_score: 0.2091, keyword_count: 0 }
+
+[0.0261] << 1088.20 : 1089.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.0261] << 1089.20 : 1090.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.0261] << 1090.20 : 1091.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.7490] << 1091.20 : 1095.20 =>  an invalid array index can occur in some cases
+{ pos_score: 0.4285, neg_score: 0.1295, topic_score: 0.3500, keyword_count: 2 }
+
+[0.0261] << 1095.20 : 1096.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.0066] << 1096.20 : 1097.20 =>  yes
+{ pos_score: 0.0635, neg_score: 0.1118, topic_score: 0.0549, keyword_count: 0 }
+
+[0.5705] << 1097.20 : 1104.20 =>  yes it can occur but it never wait and invalid array index can occur yeah it can occur but it never gets red because you it you can have i for example minus one but then you don't check it so i guess it can occur but it doesn't really matter i don't know if it's like
+{ pos_score: 0.3629, neg_score: 0.1360, topic_score: 0.2435, keyword_count: 2 }
+
+[0.5067] << 1104.20 : 1111.20 =>  does it ask if we access the array yeah because i would assume if we access the array
+{ pos_score: 0.3386, neg_score: 0.1218, topic_score: 0.2399, keyword_count: 1 }
+
+[0.7061] << 1111.20 : 1118.20 =>  i don't know if we access the array i don't know if we access the array i mean we don't access the array because the first
+{ pos_score: 0.4243, neg_score: 0.1233, topic_score: 0.3550, keyword_count: 1 }
+
+[0.0557] << 1118.20 : 1120.20 =>  it would cause this one ever
+{ pos_score: 0.1070, neg_score: 0.0983, topic_score: 0.0470, keyword_count: 0 }
+
+[0.1395] << 1120.20 : 1123.20 =>  it wouldn't because you don't check the
+{ pos_score: 0.0801, neg_score: 0.0467, topic_score: 0.1060, keyword_count: 0 }
+
+[-0.0583] << 1123.20 : 1125.20 =>  so if you don't
+{ pos_score: 0.0414, neg_score: 0.0587, topic_score: -0.0409, keyword_count: 0 }
+
+[0.2216] << 1125.20 : 1141.20 =>  if you don't check the
+{ pos_score: 0.1201, neg_score: 0.0706, topic_score: 0.1721, keyword_count: 0 }
+
+[0.3867] << 1141.20 : 1146.20 =>  i think because you get i minus one you get i minus one you never check it so i guess i
+{ pos_score: 0.2609, neg_score: 0.0453, topic_score: 0.1711, keyword_count: 0 }
+
+[0.6668] << 1146.20 : 1156.20 =>  i is if i is like index of the array then it can occur but you never check it so it's not an error
+{ pos_score: 0.3720, neg_score: 0.1197, topic_score: 0.3145, keyword_count: 2 }
+
+[0.0521] << 1156.20 : 1160.20 =>  probably so we'll have it as it's complicated
+{ pos_score: 0.1578, neg_score: 0.1962, topic_score: 0.0904, keyword_count: 0 }
+
+[-0.0458] << 1160.20 : 1161.20 =>  yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.3284] << 1161.20 : 1166.20 =>  duplicate or negative data values could cause problems
+{ pos_score: 0.2260, neg_score: 0.0710, topic_score: 0.1734, keyword_count: 0 }
+
+[0.0261] << 1166.20 : 1167.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.0261] << 1167.20 : 1168.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.1785] << 1168.20 : 1169.20 =>  why
+{ pos_score: 0.1256, neg_score: 0.0223, topic_score: 0.0753, keyword_count: 0 }
+
+[0.1890] << 1169.20 : 1170.20 =>  okay
+{ pos_score: 0.1465, neg_score: 0.1665, topic_score: 0.2090, keyword_count: 0 }
+
+[0.3956] << 1170.20 : 1181.20 =>  consider how many times each line of code runs the best fastest case which lines run zero times
+{ pos_score: 0.2173, neg_score: 0.1333, topic_score: 0.3116, keyword_count: 0 }
+
+[0.2387] << 1181.20 : 1184.20 =>  which lines run zero times
+{ pos_score: 0.1603, neg_score: 0.0523, topic_score: 0.1306, keyword_count: 0 }
+
+[0.4156] << 1184.20 : 1185.20 =>  6-7
+{ pos_score: 0.2892, neg_score: 0.1283, topic_score: 0.2547, keyword_count: 0 }
+
+[0.3627] << 1185.20 : 1186.20 =>  so 6-7
+{ pos_score: 0.2637, neg_score: 0.1255, topic_score: 0.2245, keyword_count: 0 }
+
+[-0.0458] << 1186.20 : 1187.20 =>  yeah
+{ pos_score: 0.0697, neg_score: 0.1232, topic_score: 0.0078, keyword_count: 0 }
+
+[0.4439] << 1190.20 : 1192.20 =>  and 8 also
+{ pos_score: 0.2599, neg_score: 0.0974, topic_score: 0.2815, keyword_count: 0 }
+
+[0.0261] << 1192.20 : 1193.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.0261] << 1193.20 : 1194.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.0261] << 1194.20 : 1195.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.0344] << 1195.20 : 1196.20 =>  why not
+{ pos_score: 0.1389, neg_score: 0.0998, topic_score: -0.0046, keyword_count: 0 }
+
+[0.0261] << 1196.20 : 1197.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.0261] << 1197.20 : 1198.20 =>  no
+{ pos_score: 0.0835, neg_score: 0.1564, topic_score: 0.0990, keyword_count: 0 }
+
+[0.1450] << 1198.20 : 1208.70 =>  any
+{ pos_score: 0.1615, neg_score: 0.1210, topic_score: 0.1046, keyword_count: 0 }
+
