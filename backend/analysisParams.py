@@ -1,4 +1,5 @@
 AUDIO_PATH = 'recordings'
+REMOVE_FILES = True
 
 params = {
     "task_queries": [
@@ -112,7 +113,7 @@ params = {
         "shift", "compare", "comparison", "index", "value", "number",
         "iteration", "pass", "key", "loop", "while", "for", "swap"
     ],
-    "debug_skip_transcriber": True,
+    "debug_skip_transcriber": False,
     "log_results": False,
     "save_segments_bin": False
 }
