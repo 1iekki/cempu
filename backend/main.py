@@ -5,7 +5,7 @@ from concurrent.futures import ProcessPoolExecutor
 import os
 from pathlib import Path
 import shutil
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect, status
 from fastapi.responses import HTMLResponse
 import analysisParams
 from cempuMQTT import CempuMQTT
@@ -133,8 +133,12 @@ async def get_analysis_results(device_name:str):
         return "TASK IN PROGRESS"
     
 @app.post("/upload/{device_name}")
-def upload_file(device_name:str, file: UploadFile):
-    
+def upload_file(device_name:str, file: UploadFile, response: Response):
+
+    if(file.content_type != "audio/wave"):
+        response.status_code = status.HTTP_415_UNSUPPORTED_MEDIA_TYPE
+        return {"message": "Invalid file type"}
+
     baseFilePath = Path(analysisParams.AUDIO_PATH, device_name)
     os.makedirs(baseFilePath, exist_ok=True)
     fullFilePath = baseFilePath / "rec.wav"
