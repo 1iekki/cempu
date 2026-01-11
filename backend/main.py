@@ -2,7 +2,10 @@ import asyncio
 from contextlib import asynccontextmanager
 
 from concurrent.futures import ProcessPoolExecutor
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+import os
+from pathlib import Path
+import shutil
+from fastapi import FastAPI, Response, WebSocket, WebSocketDisconnect, status
 from fastapi.responses import HTMLResponse
 import analysisParams
 from cempuMQTT import CempuMQTT
@@ -10,6 +13,8 @@ from connectionManager import ConnectionManager
 
 from contextClassifier import ContextClassifier
 from contextProcessor import ContextProcessor
+
+from fastapi import FastAPI, File, UploadFile
 
 async def handleMQTTMessages(queue: asyncio.Queue, manager: ConnectionManager):
     while True:
@@ -39,7 +44,7 @@ async def lifespan(app: FastAPI):
 
         worker_task.cancel()
 
-
+os.makedirs(analysisParams.AUDIO_PATH, exist_ok=True)
 app = FastAPI(lifespan=lifespan)
 tasks = {}
 executor = ProcessPoolExecutor()
@@ -95,8 +100,8 @@ async def websocket_endpoint(websocket: WebSocket, device_id: str):
         app.state.connectionManager.disconnect(websocket, device_id)
 
 
-def analyze(group_num:int) -> float:
-    path = f"{analysisParams.AUDIO_PATH}/{group_num}/rec.wav"
+def analyze(device_name:str) -> float:
+    path = f"{analysisParams.AUDIO_PATH}/{device_name}/rec.wav"
     p = ContextProcessor(analysisParams.params)
     clf = ContextClassifier(True)
     res = p.process(path)
@@ -104,8 +109,8 @@ def analyze(group_num:int) -> float:
     return score
 
 
-@app.post("/analyze/{group_num}")
-async def start_analysis(group_num:int):
+@app.post("/analyze/{device_name}")
+async def start_analysis(group_num:str):
     loop = asyncio.get_running_loop()
     task = loop.run_in_executor(executor, analyze, group_num)
 
@@ -118,11 +123,27 @@ async def start_analysis(group_num:int):
         "audioPath" : f"{analysisParams.AUDIO_PATH}/{group_num}/rec.wav"
         }
 
-@app.get("/analyze/{group_num}")
-async def get_analysis_results(group_num:int):
-    if not tasks.get(group_num):
+@app.get("/analyze/{device_name}")
+async def get_analysis_results(device_name:str):
+    if not tasks.get(device_name):
         return "TASK NOT FOUND"
-    if(tasks[group_num].done()):
-        return tasks[group_num].result()
+    if(tasks[device_name].done()):
+        return tasks[device_name].result()
     else:
         return "TASK IN PROGRESS"
+    
+@app.post("/upload/{device_name}")
+def upload_file(device_name:str, file: UploadFile, response: Response):
+
+    if(file.content_type != "audio/wave"):
+        response.status_code = status.HTTP_415_UNSUPPORTED_MEDIA_TYPE
+        return {"message": "Invalid file type"}
+
+    baseFilePath = Path(analysisParams.AUDIO_PATH, device_name)
+    os.makedirs(baseFilePath, exist_ok=True)
+    fullFilePath = baseFilePath / "rec.wav"
+    
+    with open(fullFilePath, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+        
+    return {"message": "Success"}
