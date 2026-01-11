@@ -64,16 +64,21 @@ def on_message_cempu(client, userdata, msg):
         print("Exiting")
     print(msg.topic, message)
 
-
-def upload_file(file_path: str, server_url: str, timeout: int = 300):
+def upload_file(file_path: str, server_url: str, timeout: int = 60):
     try:
         with open(file_path, 'rb') as f:
-            payload = dict(file=f)
-            response = requests.post(server_url, data=payload, timeout = timeout)
+            files = {"file": (WAVE_OUTPUT_FILENAME, f, "audio/wave")}
+            response = requests.post(server_url, files=files, timeout = timeout)
             response.raise_for_status()
-            print(response.status_code)
+            print(f"* Upload successful: {response.status_code}")
+    except requests.exceptions.Timeout:
+        print(f"* Upload timed out after {timeout} seconds")
+        print("* Check network connection to", server_url)
+    except requests.exceptions.ConnectionError as e:
+        print(f"* Could not connect to server: {e}")
+        print("* Make sure the backend server is running at", server_url)
     except requests.exceptions.RequestException as e:
-        print(e)
+        print(f"* Upload failed: {e}")
 
 def processChunk(in_data, frame_count, time_info, status):
     audio_queue.put(in_data)
@@ -117,7 +122,7 @@ def record_audio(mqtt):
                 
                 print("* Done.")
                 print("* Uploading the file to the server")
-                upload_file(WAVE_OUTPUT_FILENAME, IP_ADDRESS)
+                upload_file(WAVE_OUTPUT_FILENAME, f"http://{IP_ADDRESS}:8000/upload/dev1",)
                 print("* Done uploading")
                 break
         
