@@ -1,22 +1,27 @@
 import asyncio
+from contextlib import asynccontextmanager
+
 from concurrent.futures import ProcessPoolExecutor
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
-from contextlib import asynccontextmanager
 import analysisParams
 from cempuMQTT import CempuMQTT
 from connectionManager import ConnectionManager
+
 from contextClassifier import ContextClassifier
 from contextProcessor import ContextProcessor
 
 async def handleMQTTMessages(queue: asyncio.Queue, manager: ConnectionManager):
     while True:
-        # 1. Wait for a message from MQTT
-        message = await queue.get()
-        # 2. Send it to ALL connected users
-        await manager.broadcast(message)
+        data = await queue.get()
+
+        device_id = data["device_id"]
+        payload = data["payload"]
+
+        await manager.broadcast_to_device(payload, device_id)
 
         queue.task_done()
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -24,18 +29,16 @@ async def lifespan(app: FastAPI):
     app.state.connectionManager = manager
 
     loop = asyncio.get_running_loop()
-    
-    # The Single Shared Queue
-    mqtt_queue = asyncio.Queue()
 
-    # Start the worker that reads the queue and broadcasts
+    mqtt_queue = asyncio.Queue()
     worker_task = asyncio.create_task(handleMQTTMessages(mqtt_queue, manager))
-                                      
+
     with CempuMQTT("server", mqtt_queue, loop) as mqtt:
         app.state.mqtt = mqtt
         yield
 
         worker_task.cancel()
+
 
 app = FastAPI(lifespan=lifespan)
 tasks = {}
@@ -80,15 +83,17 @@ html = """
 async def get():
     return HTMLResponse(html)
 
-@app.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
-    await app.state.connectionManager.connect(websocket)
+
+@app.websocket("/ws/{device_id}")
+async def websocket_endpoint(websocket: WebSocket, device_id: str):
+    await app.state.connectionManager.connect(websocket, device_id)
     try:
         while True:
-            await websocket.receive_text()
+            data = await websocket.receive_text()
+            app.state.mqtt.sendCommand(data, device_id)
     except WebSocketDisconnect:
-        app.state.connectionManager.disconnect(websocket)
-        await app.state.connectionManager.broadcast(f"Client left the chat")
+        app.state.connectionManager.disconnect(websocket, device_id)
+
 
 def analyze(group_num:int) -> float:
     path = f"{analysisParams.AUDIO_PATH}/{group_num}/rec.wav"
