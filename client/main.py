@@ -68,8 +68,8 @@ def on_message_cempu(client, userdata, msg):
 def upload_file(file_path: str, server_url: str, timeout: int = 300):
     try:
         with open(file_path, 'rb') as f:
-            files = {'file': f}
-            response = requests.post(server_url, files = files, timeout = timeout)
+            payload = dict(file=f)
+            response = requests.post(server_url, data=payload, timeout = timeout)
             response.raise_for_status()
             print(response.status_code)
     except requests.exceptions.RequestException as e:
