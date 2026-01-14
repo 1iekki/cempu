@@ -11,6 +11,7 @@
         $groupStatuses[groupId] || "stopped",
     );
     let socket: WebSocket;
+    let intervalId: ReturnType<typeof setInterval> | undefined;
 
     $effect(() => {
         updateGroupStatus(groupId, status);
@@ -49,7 +50,12 @@
             engagement = Number(event.data);
         };
 
-        return () => socket.close();
+        return () => {
+            socket.close();
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
+        };
     });
 
     function goBack() {
@@ -59,11 +65,16 @@
     function handleStart() {
         status = "recording";
         socket.send("1");
+        clearInterval(intervalId);
     }
 
     function handleStop() {
         status = "stopped";
         socket.send("2");
+        if (intervalId) {
+            clearInterval(intervalId);
+            intervalId = undefined;
+        }
     }
 
     function handlePause() {
@@ -75,7 +86,7 @@
         status = "analyzing";
         socket.send("4");
         const request = new Request(
-            `http::/localhost:8000/analyze/dev${groupId}`,
+            `http://localhost:8000/analyze/dev${groupId}`,
             {
                 method: "POST",
             },
@@ -83,6 +94,18 @@
         fetch(request).then((res) => {
             console.log(res);
         });
+
+        intervalId = setInterval(() => {
+            const getRequest = new Request(
+                `http://localhost:8000/analyze/dev${groupId}`,
+                {
+                    method: "GET",
+                },
+            );
+            fetch(getRequest).then((res) => {
+                console.log(res);
+            });
+        }, 1000);
     }
 </script>
 

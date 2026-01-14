@@ -7,13 +7,13 @@ from pathlib import Path
 
 from fastapi import (
     FastAPI,
-    File,
     Response,
     UploadFile,
     WebSocket,
     WebSocketDisconnect,
     status,
 )
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 
 import analysisParams
@@ -54,6 +54,18 @@ async def lifespan(app: FastAPI):
 
 os.makedirs(analysisParams.AUDIO_PATH, exist_ok=True)
 app = FastAPI(lifespan=lifespan)
+
+origins = [
+    "*",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 tasks = {}
 executor = ProcessPoolExecutor()
 
@@ -118,17 +130,17 @@ def analyze(device_name: str) -> float:
 
 
 @app.post("/analyze/{device_name}")
-async def start_analysis(group_num: str):
+async def start_analysis(device_name: str):
     loop = asyncio.get_running_loop()
-    task = loop.run_in_executor(executor, analyze, group_num)
+    task = loop.run_in_executor(executor, analyze, device_name)
 
-    if tasks.get(group_num):
-        tasks.get(group_num).cancel()
-    tasks[group_num] = task
+    if tasks.get(device_name):
+        tasks.get(device_name).cancel()
+    tasks[device_name] = task
 
     return {
-        "message": f"Analysis started for group {group_num}",
-        "audioPath": f"{analysisParams.AUDIO_PATH}/{group_num}/rec.wav",
+        "message": f"Analysis started for group {device_name}",
+        "audioPath": f"{analysisParams.AUDIO_PATH}/{device_name}/rec.wav",
     }
 
 
