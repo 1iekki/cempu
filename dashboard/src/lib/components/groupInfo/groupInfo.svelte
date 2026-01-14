@@ -10,7 +10,7 @@
                 recording: "border-l-green-500 bg-green-50",
                 paused: "border-l-blue-500 bg-blue-50",
                 stopped: "border-l-red-500 bg-red-50",
-                analyzing: "border-l-grey-500 bg-grey-50"
+                analyzing: "border-l-grey-500 bg-grey-50",
             },
         },
         defaultVariants: {
@@ -37,7 +37,7 @@
         recording: "On",
         paused: "Paused",
         stopped: "Off",
-        analyzing: "Analyzing"
+        analyzing: "Analyzing",
     };
 
     let displayStatus = $derived(statusTextMap[status]);

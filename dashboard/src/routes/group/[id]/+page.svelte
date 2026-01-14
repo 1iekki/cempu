@@ -7,7 +7,9 @@
     let groupId = $derived($page.params.id!);
 
     let engagement = $state(0);
-    let status = $state<"recording" | "paused" | "stopped" | "analyzing">($groupStatuses[groupId] || "stopped");
+    let status = $state<"recording" | "paused" | "stopped" | "analyzing">(
+        $groupStatuses[groupId] || "stopped",
+    );
     let socket: WebSocket;
 
     $effect(() => {
@@ -18,27 +20,27 @@
         recording: {
             borderColor: "border-l-green-500",
             statusText: "Recording",
-            statusColor: "text-green-600"
+            statusColor: "text-green-600",
         },
         paused: {
             borderColor: "border-l-blue-500",
             statusText: "Paused",
-            statusColor: "text-blue-600"
+            statusColor: "text-blue-600",
         },
         stopped: {
             borderColor: "border-l-red-500",
             statusText: "Stopped",
-            statusColor: "text-red-600"
+            statusColor: "text-red-600",
         },
         analyzing: {
             borderColor: "border-l-grey-500",
             statusText: "Analyzing",
-            statusColor: "text-grey-600"
-        }
+            statusColor: "text-grey-600",
+        },
     };
 
     let currentVariant = $derived(variants[status]);
-    
+
     onMount(() => {
         socket = new WebSocket(`ws://localhost:8000/ws/dev${groupId}`);
 
@@ -72,6 +74,15 @@
     function handleAnalyze() {
         status = "analyzing";
         socket.send("4");
+        const request = new Request(
+            `http::/localhost:8000/analyze/dev${groupId}`,
+            {
+                method: "POST",
+            },
+        );
+        fetch(request).then((res) => {
+            console.log(res);
+        });
     }
 </script>
 
@@ -85,14 +96,16 @@
 </div>
 <div class="min-h-screen bg-gray-50 p-8">
     <div
-        class="bg-white rounded-lg shadow-lg p-8 border-l-[16px] transition-all duration-300 {currentVariant.borderColor}"
+        class="bg-white rounded-lg shadow-lg p-8 border-l-16 transition-all duration-300 {currentVariant.borderColor}"
     >
         <h1 class="text-3xl font-bold mb-6">Group {groupId} Details</h1>
 
         <div class="space-y-4 mb-6">
             <div>
                 <h2 class="text-xl font-semibold text-gray-700">Status</h2>
-                <p class="text-lg font-semibold {currentVariant.statusColor} transition-colors duration-300">
+                <p
+                    class="text-lg font-semibold {currentVariant.statusColor} transition-colors duration-300"
+                >
                     {currentVariant.statusText}
                 </p>
             </div>
