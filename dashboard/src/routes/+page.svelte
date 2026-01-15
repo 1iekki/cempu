@@ -1,6 +1,13 @@
 <script>
     import GroupInfo from "$lib/components/groupInfo/groupInfo.svelte";
     import { groupStatuses, updateGroupStatus } from "$lib/stores/groupStore";
+    import {
+        startTimer,
+        stopTimer,
+        pauseTimer,
+        resetTimer,
+        cleanupAllTimers,
+    } from "$lib/stores/timerStore";
     import { onMount } from "svelte";
 
     let groups = ["1", "2", "3"];
@@ -24,6 +31,7 @@
     function handleStart() {
         for (let group of groups) {
             updateGroupStatus(group, "recording");
+            startTimer(group);
             sockets.get(group).send("1");
         }
     }
@@ -31,6 +39,7 @@
     function handleStop() {
         for (let group of groups) {
             updateGroupStatus(group, "stopped");
+            resetTimer(group);
             sockets.get(group).send("2");
         }
     }
@@ -38,6 +47,7 @@
     function handlePause() {
         for (let group of groups) {
             updateGroupStatus(group, "paused");
+            pauseTimer(group);
             sockets.get(group).send("3");
         }
     }
@@ -45,6 +55,7 @@
     function handleAnalyze() {
         for (let group of groups) {
             updateGroupStatus(group, "analyzing");
+            stopTimer(group);
             sockets.get(group).send("4");
         }
     }

@@ -2,6 +2,13 @@
     import { page } from "$app/stores";
     import { goto } from "$app/navigation";
     import { onMount } from "svelte";
+    import { groupTimers, formatTime } from "$lib/stores/timerStore";
+    import {
+        startTimer,
+        stopTimer,
+        pauseTimer,
+        resetTimer,
+    } from "$lib/stores/timerStore";
     import { groupStatuses, updateGroupStatus } from "$lib/stores/groupStore";
 
     let groupId = $derived($page.params.id!);
@@ -65,11 +72,13 @@
     function handleStart() {
         status = "recording";
         socket.send("1");
+        startTimer(groupId);
         clearInterval(intervalId);
     }
 
     function handleStop() {
         status = "stopped";
+        resetTimer(groupId);
         socket.send("2");
         if (intervalId) {
             clearInterval(intervalId);
@@ -79,11 +88,13 @@
 
     function handlePause() {
         status = "paused";
+        pauseTimer(groupId);
         socket.send("3");
     }
 
     function handleAnalyze() {
         status = "analyzing";
+        resetTimer(groupId);
         socket.send("4");
         const request = new Request(
             `http://localhost:8000/analyze/dev${groupId}`,
@@ -107,6 +118,7 @@
             });
         }, 1000);
     }
+    let timer = $derived($groupTimers[groupId.toString()]);
 </script>
 
 <div class="w-full h-24 bg-blue-900 flex items-center px-8">
@@ -142,7 +154,7 @@
 
             <div>
                 <h2 class="text-xl font-semibold text-gray-700">Time</h2>
-                <p class="text-lg">00:12:13</p>
+                <p class="text-lg">{formatTime(timer)}</p>
             </div>
         </div>
 

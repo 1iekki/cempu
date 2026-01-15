@@ -2,6 +2,7 @@
     import { tv, type VariantProps } from "tailwind-variants";
     import type { Snippet } from "svelte";
     import { goto } from "$app/navigation";
+    import { groupTimers, formatTime } from "$lib/stores/timerStore";
 
     const groupVariants = tv({
         base: "grid grid-cols-2 grid-rows-3 rounded-md p-4 bg-gray-100 shadow-lg border-l-[20px] transition-all hover:shadow-xl",
@@ -60,6 +61,7 @@
     function handleClick() {
         goto(`/group/${groupId}`);
     }
+    let timer = $derived($groupTimers[groupId.toString()]);
 </script>
 
 <div
@@ -73,5 +75,5 @@
     <p>Group: {groupId}</p>
     <p class="text-right">Status: {displayStatus}</p>
     <p class="col-span-2">Engagement score: {engagement}</p>
-    <p class="col-span-2">Time: 00:12:13</p>
+    <p class="col-span-2">Time: {formatTime(timer)}</p>
 </div>
