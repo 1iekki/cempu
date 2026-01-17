@@ -6,8 +6,8 @@
         stopTimer,
         pauseTimer,
         resetTimer,
-        cleanupAllTimers,
     } from "$lib/stores/timerStore";
+    import { updateAnalysisResult } from "$lib/stores/analysisStore";
     import { onMount } from "svelte";
 
     let groups = ["1", "2", "3"];
@@ -52,17 +52,66 @@
         }
     }
 
-    function handleAnalyze() {
+    async function analyzeGroup(groupId) {
+        try {
+            // Clear previous result
+            updateAnalysisResult(groupId, null, null);
+
+            // Start the analysis
+            const startResponse = await fetch(
+                `http://localhost:8000/analyze/dev${groupId}`,
+                { method: "POST" },
+            );
+
+            if (!startResponse.ok) {
+                throw new Error("Failed to start analysis");
+            }
+
+            // Poll for results until we get one
+            while (true) {
+                await new Promise((resolve) => setTimeout(resolve, 1000));
+
+                const getResponse = await fetch(
+                    `http://localhost:8000/analyze/dev${groupId}`,
+                    { method: "GET" },
+                );
+
+                const result = await getResponse.text();
+                const trimmedResult = result.trim();
+                console.log(`Group ${groupId} analysis status:`, trimmedResult);
+
+                // Check if result is a valid number
+                const parsedScore = parseFloat(trimmedResult);
+
+                if (!isNaN(parsedScore)) {
+                    // Got a valid number - analysis complete
+                    updateAnalysisResult(groupId, parsedScore, null);
+                    updateGroupStatus(groupId, "stopped");
+                    break;
+                }
+            }
+        } catch (error) {
+            console.error(`Group ${groupId} analysis error:`, error);
+            const errorMsg =
+                error instanceof Error ? error.message : "Analysis failed";
+            updateAnalysisResult(groupId, null, errorMsg);
+            updateGroupStatus(groupId, "stopped");
+        }
+    }
+
+    async function handleAnalyze() {
         for (let group of groups) {
             updateGroupStatus(group, "analyzing");
             stopTimer(group);
             sockets.get(group).send("4");
         }
+        const analysisPromises = groups.map((group) => analyzeGroup(group));
+        await Promise.all(analysisPromises);
     }
 </script>
 
 <div class="flex flex-col items-center">
-    <div class="w-full h-24 bg-blue-900 flex items-center px-8">
+    <div class="w-full h-24 bg-blue-900 flex justify-center items-center">
         <div class="flex gap-4 flex-wrap">
             <button
                 onclick={handleStart}
