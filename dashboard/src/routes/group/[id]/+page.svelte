@@ -113,11 +113,20 @@
                     method: "GET",
                 },
             );
-            fetch(getRequest).then((res) => {
-                console.log(res);
+            fetch(getRequest).then((res) => res.json()).then((data) => {
+                console.log(data);
+                
+                // stop if analysis is complete
+                if (data !== "TASK IN PROGRESS" && data !== "TASK NOT FOUND") {
+                    handleStop();
+                }
+            })
+            .catch((error) => {
+                console.error("Error:", error);
             });
         }, 1000);
     }
+    
     let timer = $derived($groupTimers[groupId.toString()]);
 </script>
 
