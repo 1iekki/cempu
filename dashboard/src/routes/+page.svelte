@@ -62,32 +62,32 @@
 </script>
 
 <div class="flex flex-col items-center">
-    <div class="w-full h-24 bg-blue-900">
+    <div class="w-full h-24 bg-blue-900 flex items-center px-8">
         <div class="flex gap-4 flex-wrap">
             <button
                 onclick={handleStart}
-                class="px-6 py-3 bg-white border-2 border-green-500 text-green-600 rounded-lg hover:bg-green-50 font-semibold transition-colors disabled:opacity-50"
+                class="px-6 py-3 bg-white text-green-600 rounded-lg hover:bg-green-50 hover:shadow-xl hover:shadow-white/10 font-semibold transition-all duration-200 disabled:opacity-50"
             >
                 Start
             </button>
 
             <button
                 onclick={handlePause}
-                class="px-6 py-3 bg-white border-2 border-blue-500 text-blue-600 rounded-lg hover:bg-blue-50 font-semibold transition-colors disabled:opacity-50"
+                class="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-blue-50 hover:shadow-xl hover:shadow-white/10 font-semibold transition-all duration-200 disabled:opacity-50"
             >
                 Pause
             </button>
 
             <button
                 onclick={handleStop}
-                class="px-6 py-3 bg-white border-2 border-red-500 text-red-600 rounded-lg hover:bg-red-50 font-semibold transition-colors disabled:opacity-50"
+                class="px-6 py-3 bg-white text-red-600 rounded-lg hover:bg-red-50 hover:shadow-xl hover:shadow-white/10 font-semibold transition-all duration-200 disabled:opacity-50"
             >
                 Stop
             </button>
 
             <button
                 onclick={handleAnalyze}
-                class="px-6 py-3 bg-white border-2 border-grey-500 text-grey-600 rounded-lg hover:bg-grey-50 font-semibold transition-colors disabled:opacity-50"
+                class="px-6 py-3 bg-white text-grey-600 rounded-lg hover:bg-grey-50 hover:shadow-xl hover:shadow-white/10 font-semibold transition-all duration-200 disabled:opacity-50"
             >
                 Analyze
             </button>

@@ -21,6 +21,7 @@ from cempuMQTT import CempuMQTT
 from connectionManager import ConnectionManager
 from contextClassifier import ContextClassifier
 from contextProcessor import ContextProcessor
+from speakerDiarization import SpeakerDiarization
 
 
 async def handleMQTTMessages(queue: asyncio.Queue, manager: ConnectionManager):
@@ -120,13 +121,23 @@ async def websocket_endpoint(websocket: WebSocket, device_id: str):
         app.state.connectionManager.disconnect(websocket, device_id)
 
 
-def analyze(device_name: str) -> float:
+def analyze(device_name: str) -> dict:
     path = f"{analysisParams.AUDIO_PATH}/{device_name}/rec.wav"
+
     p = ContextProcessor(analysisParams.params)
     clf = ContextClassifier(True)
     res = p.process(path)
-    score = clf.getScore(res)
-    return score
+    context_score = clf.getScore(res)
+
+    diarizer = SpeakerDiarization()
+    output = diarizer.run(path)
+    speaker_times = diarizer.get_speaker_times(output)
+    diarization_score = diarizer.engagement_score(speaker_times)
+
+    return {
+        "context_score": context_score, 
+        "engagement_score": diarization_score
+    }
 
 
 @app.post("/analyze/{device_name}")
