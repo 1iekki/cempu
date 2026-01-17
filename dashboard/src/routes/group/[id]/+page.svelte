@@ -9,9 +9,20 @@
         pauseTimer,
         resetTimer,
     } from "$lib/stores/timerStore";
+    import {
+        groupAnalysisResults,
+        updateAnalysisResult,
+    } from "$lib/stores/analysisStore";
     import { groupStatuses, updateGroupStatus } from "$lib/stores/groupStore";
 
     let groupId = $derived($page.params.id!);
+
+    let analysisData = $derived(
+        $groupAnalysisResults[groupId] || {
+            score: null,
+            error: null,
+        },
+    );
 
     let engagement = $state(0);
     let status = $state<"recording" | "paused" | "stopped" | "analyzing">(
@@ -78,7 +89,7 @@
 
     function handleStop() {
         status = "stopped";
-        resetTimer(groupId);
+        stopTimer(groupId);
         socket.send("2");
         if (intervalId) {
             clearInterval(intervalId);
@@ -92,31 +103,54 @@
         socket.send("3");
     }
 
-    function handleAnalyze() {
+    async function handleAnalyze() {
         status = "analyzing";
-        resetTimer(groupId);
+        stopTimer(timer);
         socket.send("4");
-        const request = new Request(
-            `http://localhost:8000/analyze/dev${groupId}`,
-            {
-                method: "POST",
-            },
-        );
-        fetch(request).then((res) => {
-            console.log(res);
-        });
 
-        intervalId = setInterval(() => {
-            const getRequest = new Request(
+        updateAnalysisResult(groupId, null, null);
+
+        try {
+            // Start the analysis
+            const startResponse = await fetch(
                 `http://localhost:8000/analyze/dev${groupId}`,
-                {
-                    method: "GET",
-                },
+                { method: "POST" },
             );
-            fetch(getRequest).then((res) => {
-                console.log(res);
-            });
-        }, 1000);
+
+            if (!startResponse.ok) {
+                throw new Error("Failed to start analysis");
+            }
+
+            // Poll for results until we get one
+            while (true) {
+                await new Promise((resolve) => setTimeout(resolve, 1000));
+
+                const getResponse = await fetch(
+                    `http://localhost:8000/analyze/dev${groupId}`,
+                    { method: "GET" },
+                );
+
+                const result = await getResponse.text();
+                const trimmedResult = result.trim();
+                console.log("Analysis status:", trimmedResult);
+
+                // Check if result is a valid number
+                const parsedScore = parseFloat(trimmedResult);
+
+                if (!isNaN(parsedScore)) {
+                    // Got a valid number - analysis complete
+                    updateAnalysisResult(groupId, parsedScore, null);
+                    status = "stopped";
+                    break;
+                }
+            }
+        } catch (error) {
+            console.error("Analysis error:", error);
+            const errorMsg =
+                error instanceof Error ? error.message : "Analysis failed";
+            updateAnalysisResult(groupId, null, errorMsg);
+            status = "stopped";
+        }
     }
     let timer = $derived($groupTimers[groupId.toString()]);
 </script>
@@ -149,7 +183,33 @@
                 <h2 class="text-xl font-semibold text-gray-700">
                     Engagement Score
                 </h2>
-                <p class="text-lg">{engagement}</p>
+                <p class="text-lg">
+                    {#if engagement >= 0 && engagement <= 33}
+                        low
+                    {:else if engagement >= 34 && engagement <= 66}
+                        average
+                    {:else if engagement >= 67 && engagement <= 100}
+                        high
+                    {/if}
+                </p>
+            </div>
+            <div>
+                <h2 class="text-xl font-semibold text-gray-700">
+                    Analysis Result
+                </h2>
+                {#if status === "analyzing"}
+                    <p class="text-lg text-purple-500 animate-pulse">
+                        Analyzing...
+                    </p>
+                {:else if analysisData.score !== null}
+                    <p class="text-lg font-semibold text-green-600">
+                        Score: {analysisData.score.toFixed(2)}
+                    </p>
+                {:else if analysisData.error}
+                    <p class="text-lg text-red-600">{analysisData.error}</p>
+                {:else}
+                    <p class="text-lg text-gray-400">No analysis yet</p>
+                {/if}
             </div>
 
             <div>

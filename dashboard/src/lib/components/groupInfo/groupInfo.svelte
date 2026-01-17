@@ -3,6 +3,7 @@
     import type { Snippet } from "svelte";
     import { goto } from "$app/navigation";
     import { groupTimers, formatTime } from "$lib/stores/timerStore";
+    import { groupAnalysisResults } from "$lib/stores/analysisStore";
 
     const groupVariants = tv({
         base: "grid grid-cols-2 grid-rows-3 rounded-md p-4 bg-gray-100 shadow-lg border-l-[20px] transition-all hover:shadow-xl",
@@ -62,6 +63,13 @@
         goto(`/group/${groupId}`);
     }
     let timer = $derived($groupTimers[groupId.toString()]);
+
+    let analysisData = $derived(
+        $groupAnalysisResults[groupId.toString()] || {
+            score: null,
+            error: null,
+        },
+    );
 </script>
 
 <div
@@ -74,6 +82,28 @@
 >
     <p>Group: {groupId}</p>
     <p class="text-right">Status: {displayStatus}</p>
-    <p class="col-span-2">Engagement score: {engagement}</p>
+    <p class="col-span-2">
+        Engagement score: {#if engagement >= 0 && engagement <= 33}
+            low
+        {:else if engagement >= 34 && engagement <= 66}
+            average
+        {:else if engagement >= 67 && engagement <= 100}
+            high
+        {/if}
+    </p>
+    <p class="col-span-2">
+        Analysis:
+        {#if status === "analyzing"}
+            <span class="text-purple-600 animate-pulse">Analyzing...</span>
+        {:else if analysisData.score !== null}
+            <span class="text-green-600 font-semibold"
+                >{analysisData.score.toFixed(2)}</span
+            >
+        {:else if analysisData.error}
+            <span class="text-red-600">{analysisData.error}</span>
+        {:else}
+            <span class="text-gray-400">Not analyzed</span>
+        {/if}
+    </p>
     <p class="col-span-2">Time: {formatTime(timer)}</p>
 </div>
