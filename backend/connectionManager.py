@@ -1,7 +1,7 @@
 from typing import List
-
 from fastapi import WebSocket
 
+lastValuesSent = {}
 
 class ConnectionManager:
     def __init__(self):
@@ -12,6 +12,9 @@ class ConnectionManager:
         if device_id not in self.active_connections:
             self.active_connections[device_id] = []
         self.active_connections[device_id].append(websocket)
+
+        if(device_id in lastValuesSent.keys()):
+            await websocket.send_text(lastValuesSent[device_id])
 
     def disconnect(self, websocket: WebSocket, device_id: str):
         if device_id in self.active_connections:
@@ -25,3 +28,5 @@ class ConnectionManager:
         if device_id in self.active_connections:
             for connection in self.active_connections[device_id]:
                 await connection.send_text(message)
+
+        lastValuesSent[device_id] = message
