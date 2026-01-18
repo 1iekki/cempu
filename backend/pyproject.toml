@@ -10,7 +10,7 @@ dependencies = [
     "openai==2.8.1",
     "openai-whisper==20250625",
     "paho-mqtt==2.1.0",
-    "pyannote-audio==4.0.1",
+    "pyannote-audio==4.0.3",
     "python-dotenv==1.2.1",
     "python-multipart>=0.0.20",
     "scikit-learn==1.7.2",
