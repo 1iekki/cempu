@@ -19,7 +19,8 @@
 
     let analysisData = $derived(
         $groupAnalysisResults[groupId] || {
-            score: null,
+            context_score: null,
+            engagement_score: null,
             error: null,
         },
     );
@@ -105,10 +106,11 @@
 
     async function handleAnalyze() {
         status = "analyzing";
-        stopTimer(timer);
+        stopTimer(groupId);
         socket.send("4");
 
-        updateAnalysisResult(groupId, null, null);
+        // Clear previous result
+        updateAnalysisResult(groupId, null, null, null);
 
         try {
             // Start the analysis
@@ -134,25 +136,39 @@
                 const trimmedResult = result.trim();
                 console.log("Analysis status:", trimmedResult);
 
-                // Check if result is a valid number
-                const parsedScore = parseFloat(trimmedResult);
+                // Try to parse as JSON
+                try {
+                    const parsedResult = JSON.parse(trimmedResult);
 
-                if (!isNaN(parsedScore)) {
-                    // Got a valid number - analysis complete
-                    updateAnalysisResult(groupId, parsedScore, null);
-                    status = "stopped";
-                    break;
+                    // Check if we got valid scores
+                    if (
+                        parsedResult.context_score !== undefined &&
+                        parsedResult.engagement_score !== undefined
+                    ) {
+                        // Got valid result - analysis complete
+                        updateAnalysisResult(
+                            groupId,
+                            parsedResult.context_score,
+                            parsedResult.engagement_score,
+                            null,
+                        );
+                        status = "stopped";
+                        break;
+                    }
+                } catch (e) {
+                    // Not JSON yet, keep polling
+                    console.log("Waiting for result...");
                 }
             }
         } catch (error) {
             console.error("Analysis error:", error);
             const errorMsg =
                 error instanceof Error ? error.message : "Analysis failed";
-            updateAnalysisResult(groupId, null, errorMsg);
+            updateAnalysisResult(groupId, null, null, errorMsg);
             status = "stopped";
         }
     }
-    
+
     let timer = $derived($groupTimers[groupId.toString()]);
 </script>
 
@@ -204,10 +220,24 @@
                     <p class="text-lg text-purple-500 animate-pulse">
                         Analyzing...
                     </p>
-                {:else if analysisData.score !== null}
-                    <p class="text-lg font-semibold text-green-600">
-                        Score: {analysisData.score.toFixed(2)}
-                    </p>
+                {:else if analysisData.context_score !== null && analysisData.engagement_score !== null}
+                    <div class="space-y-1">
+                        <p class="text-lg">
+                            <span class="font-semibold">Context Score:</span>
+                            <span class="text-green-600 font-semibold"
+                                >{analysisData.context_score.toFixed(2)}</span
+                            >
+                        </p>
+                        <p class="text-lg">
+                            <span class="font-semibold">Diarization Score:</span
+                            >
+                            <span class="text-green-600 font-semibold"
+                                >{analysisData.engagement_score.toFixed(
+                                    2,
+                                )}</span
+                            >
+                        </p>
+                    </div>
                 {:else if analysisData.error}
                     <p class="text-lg text-red-600">{analysisData.error}</p>
                 {:else}

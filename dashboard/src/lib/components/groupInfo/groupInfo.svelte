@@ -66,7 +66,8 @@
 
     let analysisData = $derived(
         $groupAnalysisResults[groupId.toString()] || {
-            score: null,
+            context_score: null,
+            engagement_score: null,
             error: null,
         },
     );
@@ -97,10 +98,12 @@
         Analysis:
         {#if status === "analyzing"}
             <span class="text-purple-600 animate-pulse">Analyzing...</span>
-        {:else if analysisData.score !== null}
-            <span class="text-green-600 font-semibold"
-                >{analysisData.score.toFixed(2)}</span
-            >
+        {:else if analysisData.context_score !== null && analysisData.engagement_score !== null}
+            <span class="text-green-600 font-semibold">
+                C: {analysisData.context_score.toFixed(1)} | D: {analysisData.engagement_score.toFixed(
+                    1,
+                )}
+            </span>
         {:else if analysisData.error}
             <span class="text-red-600">{analysisData.error}</span>
         {:else}

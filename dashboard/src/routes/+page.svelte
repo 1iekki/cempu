@@ -55,7 +55,7 @@
     async function analyzeGroup(groupId) {
         try {
             // Clear previous result
-            updateAnalysisResult(groupId, null, null);
+            updateAnalysisResult(groupId, null, null, null);
 
             // Start the analysis
             const startResponse = await fetch(
@@ -80,21 +80,35 @@
                 const trimmedResult = result.trim();
                 console.log(`Group ${groupId} analysis status:`, trimmedResult);
 
-                // Check if result is a valid number
-                const parsedScore = parseFloat(trimmedResult);
+                // Try to parse as JSON
+                try {
+                    const parsedResult = JSON.parse(trimmedResult);
 
-                if (!isNaN(parsedScore)) {
-                    // Got a valid number - analysis complete
-                    updateAnalysisResult(groupId, parsedScore, null);
-                    updateGroupStatus(groupId, "stopped");
-                    break;
+                    // Check if we got valid scores
+                    if (
+                        parsedResult.context_score !== undefined &&
+                        parsedResult.engagement_score !== undefined
+                    ) {
+                        // Got valid result - analysis complete
+                        updateAnalysisResult(
+                            groupId,
+                            parsedResult.context_score,
+                            parsedResult.engagement_score,
+                            null,
+                        );
+                        updateGroupStatus(groupId, "stopped");
+                        break;
+                    }
+                } catch (e) {
+                    // Not JSON yet, keep polling
+                    console.log(`Group ${groupId}: Waiting for result...`);
                 }
             }
         } catch (error) {
             console.error(`Group ${groupId} analysis error:`, error);
             const errorMsg =
                 error instanceof Error ? error.message : "Analysis failed";
-            updateAnalysisResult(groupId, null, errorMsg);
+            updateAnalysisResult(groupId, null, null, errorMsg);
             updateGroupStatus(groupId, "stopped");
         }
     }
@@ -105,6 +119,8 @@
             stopTimer(group);
             sockets.get(group).send("4");
         }
+
+        // Start analysis for all groups in parallel
         const analysisPromises = groups.map((group) => analyzeGroup(group));
         await Promise.all(analysisPromises);
     }

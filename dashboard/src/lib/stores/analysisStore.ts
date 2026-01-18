@@ -4,7 +4,8 @@ export const groupAnalysisResults = writable<
   Record<
     string,
     {
-      score: number | null;
+      context_score: number | null;
+      engagement_score: number | null;
       error: string | null;
     }
   >
@@ -12,17 +13,21 @@ export const groupAnalysisResults = writable<
 
 export function updateAnalysisResult(
   groupId: string,
-  score: number | null,
+  context_score: number | null,
+  engagement_score: number | null,
   error: string | null = null,
 ) {
   groupAnalysisResults.update((results) => ({
     ...results,
     [groupId]: {
-      score,
+      context_score,
+      engagement_score,
       error,
     },
   }));
 }
+
+// Function to get analysis result
 export function getAnalysisResult(groupId: string) {
   let result:
     | { score: number | null; error: string | null; timestamp: number | null }
