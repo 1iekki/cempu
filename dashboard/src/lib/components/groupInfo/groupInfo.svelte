@@ -46,7 +46,7 @@
 
     import { onMount } from "svelte";
 
-    let engagement = $state(0);
+    let engagement = $state(-1);
 
     onMount(() => {
         const socket = new WebSocket(`ws://localhost:8000/ws/dev${groupId}`);
@@ -89,6 +89,8 @@
             average
         {:else if engagement >= 67 && engagement <= 100}
             high
+        {:else}
+            n/a
         {/if}
     </p>
     <p class="col-span-2">

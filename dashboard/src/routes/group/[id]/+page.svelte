@@ -24,7 +24,7 @@
         },
     );
 
-    let engagement = $state(0);
+    let engagement = $state(-1);
     let status = $state<"recording" | "paused" | "stopped" | "analyzing">(
         $groupStatuses[groupId] || "stopped",
     );
@@ -191,6 +191,8 @@
                         average
                     {:else if engagement >= 67 && engagement <= 100}
                         high
+                    {:else}
+                        n/a
                     {/if}
                 </p>
             </div>
