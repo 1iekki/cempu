@@ -10,14 +10,9 @@ class ContextClassifier:
     y_train:np.ndarray
     scaler:StandardScaler
 
-    def __init__(self, raw_data=True):
+    def __init__(self):
         with open("outputs/classifier_data.pkl", "rb") as f:
             data = np.array(pickle.load(f))
-
-            if not raw_data:
-                with open("outputs/contaminated_data.pkl", "rb") as f1:
-                    new_data = pickle.load(f1)
-                    data = np.vstack([data, new_data])
 
         self.X_train = data[:, :-1]
         self.y_train = data[:, -1].astype(int)
@@ -62,10 +57,6 @@ if __name__ == "__main__":
     # Load data
     with open("outputs/classifier_data.pkl", "rb") as f:
         data = pickle.load(f)
-
-        with open("outputs/contaminated_data.pkl", "rb") as f1:
-            new_data = pickle.load(f1)
-            data = np.vstack([data, new_data])
 
     print(len(data))
     column_names = [
